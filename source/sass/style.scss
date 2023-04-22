@@ -1,0 +1,11 @@
+
+// Подключение базовых стилей
+@import "./global/_variables";
+@import "./global/_mixins";
+@import "./global/_fonts";
+@import "./global/_global";
+
+// Подключение стилей блоков
+@import "./blocks/_main-header";
+@import "./blocks/_main-container";
+@import "./blocks/_main-footer";
