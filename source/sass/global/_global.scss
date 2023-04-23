@@ -32,7 +32,7 @@ img {
 }
 
 // Если используете на сайте position: sticky - уберите эту настройку
-.page-container {
+.container {
   width: 100%;
   min-width: 300px;
   max-width: 1200px;
@@ -44,14 +44,14 @@ img {
   background-color: $color-main;
   box-shadow: 0 0 15px $color-shadow-02;
 
-  overflow: hidden;
+  // overflow: hidden;
 }
 
-.container {
-  margin: 0 auto;
-  // padding: 0 var(--container-offset);
-  // max-width: var(--container-width);
-}
+// .container {
+//   margin: 0 auto;
+//   // padding: 0 var(--container-offset);
+//   // max-width: var(--container-width);
+// }
 
 .js-focus-visible :focus:not(.focus-visible) {
   outline: none;
