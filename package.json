@@ -5,7 +5,7 @@
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.0.0",
     "autoprefixer": "10.4.0",
-    "browser-sync": "2.24.1",
+    "browser-sync": "2.27.9",
     "del": "6.0.0",
     "gulp": "4.0.2",
     "gulp-dart-sass": "^1.0.2",
@@ -49,6 +49,7 @@
   },
   "type": "module",
   "dependencies": {
+    "browser-sync-client": "^2.27.9",
     "gulp-htmlmin": "^5.0.1"
   }
 }
