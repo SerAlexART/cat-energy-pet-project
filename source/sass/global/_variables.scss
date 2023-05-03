@@ -1,7 +1,7 @@
 :root {
   // Base
-  --font-family: "Lato", sans-serif;
-  --font-family-accent: "Oswald", sans-serif;
+  --font-family: "Oswald", sans-serif;
+  --font-family-secondary: "Lato", sans-serif;
   --content-width: 1160px;
   --container-offset: 20px;
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
