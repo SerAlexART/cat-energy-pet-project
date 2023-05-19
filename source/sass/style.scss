@@ -5,6 +5,9 @@
 // Подключение стилей блоков
 @use "./blocks/_text";
 @use "./blocks/_button";
+@use "./blocks/_logo";
 @use "./blocks/_main-header";
+@use "./blocks/_main-nav";
 @use "./blocks/_main-container";
+@use "./blocks/_map";
 @use "./blocks/_main-footer";
