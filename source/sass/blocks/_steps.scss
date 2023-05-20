@@ -1,0 +1,71 @@
+// Steps
+.steps {
+  display: flex;
+  flex-direction: column;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+// Stepst Items
+.steps__item {
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+
+// Stepst Text
+.steps__text {
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  column-gap: 20px;
+
+  margin: 0;
+  align-items: center;
+  color: var(--color-dark-lighten);
+
+  &::after {
+    content: "";
+
+    align-self: start;
+    grid-column-start: 1;
+    grid-row-start: 1;
+    display: block;
+    width: 60px;
+    height: 60px;
+    padding: 24px;
+
+    background-color: var(--color-accent);
+    background-repeat: no-repeat;
+    background-position: center;
+
+  }
+
+  &--leaf {
+    &::after{
+      background-image: url("../../img/icon/advantages-icon-leaf.svg");
+    }
+  }
+
+  &--water {
+    &::after{
+      background-image: url("../../img/icon/advantages-icon-water.svg");
+    }
+  }
+
+  &--eat {
+    &::after{
+      background-image: url("../../img/icon/advantages-icon-eat.svg");
+    }
+  }
+
+  &--time {
+    &::after{
+      background-image: url("../../img/icon/advantages-icon-time.svg");
+    }
+  }
+
+}

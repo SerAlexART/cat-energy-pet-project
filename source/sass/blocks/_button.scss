@@ -95,6 +95,7 @@
   font-weight: 400;
   font-size: 20px;
   line-height: 30px;
+  text-align: center;
   text-transform: uppercase;
   text-decoration: none;
   color: var(--color-dark);
@@ -128,6 +129,27 @@
     // background-color: var(--color-accent-dark);
   }
 }
+
+.button-header--current {
+  color: var(--color-accent);
+
+  cursor: auto;
+
+  &:hover,
+  &:focus,
+  &:--hover,
+  &:--focus {
+    color: var(--color-accent-dark);
+  }
+
+
+  &:active,
+  &:--active {
+    color: var(--color-accent-dark);
+  }
+}
+
+.button-header--current
 
 // Button More
 .button-more {
