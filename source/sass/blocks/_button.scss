@@ -149,19 +149,22 @@
   }
 }
 
-.button-header--current
-
 // Button More
 .button-more {
-  display: inline-block;
-  padding: 4px 9px 4px 0;
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 70px 0 25px;
 
   font-family: var(--font-family, sans-serif);
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 16px;
-  text-transform: uppercase;
+  text-align: center;
   text-decoration: none;
   color: var(--color-dark);
 
@@ -193,4 +196,84 @@
     color: var(--color-dark-03);
     // background-color: var(--color-accent-dark);
   }
+
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 2px;
+
+    background-color: var(--color-neutral-darken);
+  }
+
+  &::before {
+    content: "";
+    top: 35px;
+
+    transform: rotate(90deg);
+  }
+
+  &::after {
+    content: "";
+    top: 35px;
+
+    &:hover {
+      background-color: red;
+    }
+  }
+}
+
+// Button More Title
+.button-more__title {
+  margin-bottom: 8px;
+
+  text-transform: uppercase;
+}
+
+// Button More Text
+.button-more__text {
+  margin-bottom: 20px;
+
+  line-height: 16px;
+}
+
+// Button More Button
+.button-more__button {
+  width: 100%;
+  padding: 14px 26px;
+
+  font-family: var(--font-family, sans-serif);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--color-dark-lighten);
+
+  background-color: var(--color-neutral);
+  outline: 3px solid transparent;
+  outline-offset: 0;
+  border: none;
+
+  cursor: pointer;
+
+  transition-property: background-color, color, outline;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+}
+
+.button-more:hover .button-more__button,
+.button-more:focus .button-more__button,
+.button-more--hover .button-more__button,
+.button-more--focus .button-more__button {
+  background-color: var(--color-neutral-lighten);
+}
+
+
+.button-more:active .button-more__button,
+.button-more--active .button-more__button {
+  color: var(--color-dark-03);
 }

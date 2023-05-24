@@ -10,6 +10,12 @@
   gap: 10px;
 
   padding: var(--p-l-r) 26px;
+
+  background-color: var( --color-main);
+
+  &--dark {
+    background-color: var(--color-neutral);
+  }
 }
 
 // Map Text

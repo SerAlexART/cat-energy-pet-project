@@ -38,3 +38,31 @@
   line-height: 14px;
 }
 
+// Title Accent
+.title-accent {
+  position: relative;
+  display: inline-block;
+  max-width: 90%;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 60%;
+    top: 15px;
+
+    height: 2px;
+    width: 10000%;
+
+    background-color: var(--color-accent);
+  }
+
+  &::before {
+    left: calc(-10000% - var(--p-l-r));
+  }
+
+  &::after {
+    right: calc(-10000% - var(--p-l-r));
+  }
+}
+
