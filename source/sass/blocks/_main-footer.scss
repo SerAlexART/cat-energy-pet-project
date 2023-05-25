@@ -1,6 +1,6 @@
 // Main Footer
 .main-footer {
-
+  background-color: var( --color-neutral);
 }
 
 // Main Footer Container
@@ -10,8 +10,6 @@
   align-items: center;
 
   padding: 40px var(--p-l-r) 20px;
-
-  background-color: var( --color-neutral);
 }
 
 // Main Footer Logo

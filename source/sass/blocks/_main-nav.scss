@@ -1,6 +1,14 @@
 // Main Nav
 .main-nav {
+  display: block;
 
+  &--open {
+    display: block;
+  }
+
+  &--closed {
+    display: none;
+  }
 }
 
 // Main Wrapper

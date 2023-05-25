@@ -1,0 +1,170 @@
+// Form
+.form {
+
+}
+
+// Form Group Wrapper
+.form__group-wrapper {
+  padding: 20px 0 20px;
+}
+
+// Form Group Wrapper Accent
+.form__group-wrapper--accent {
+  position: relative;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+
+
+    height: 1px;
+    width: 10000%;
+
+    background-color: var(--color-neutral-darken);
+
+    transform: translateX(-50%);
+  }
+
+  &::before {
+    top: 0;
+  }
+
+  &::after {
+    bottom: 0;
+  }
+
+}
+
+// Form Group
+.form__group {
+  margin: 0;
+  padding: 20px 0 20px;
+  padding: 0;
+
+  border: none;
+}
+
+// Form Title
+.form__title {
+  margin-bottom: 35px;
+  padding: 0;
+}
+
+// Form Label
+.form__label {
+  font-size: 16px;
+  text-transform: uppercase;
+  color: var(--color-dark-lighten);
+}
+
+// Form Field
+.form__field {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  align-items: center;
+  gap: 13px;
+
+  margin: 0;
+
+  &:not(:last-child) {
+    margin-bottom: 14px;
+  }
+}
+
+// Form Input
+.form__input {
+  width: 100%;
+  padding: 14px 20px;
+
+  border-radius: 0;
+  border: 0;
+  outline: 1px solid var(--color-neutral);
+
+  font-family: var(--font-family, sans-serif);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  color: var(--color-dark-lighten);
+
+  transition-property: outline;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+
+
+  &:hover,
+  &:--hover {
+    outline-color: var(--color-neutral-darken);
+  }
+
+  // &:focus-visible,
+  // &:--focus-visible {
+  //   outline-color: var(--color-focus);
+  // }
+
+  &--error {
+    outline: 2px solid var(--color-status-error);
+  }
+}
+
+// Form Textarea
+.form__textarea {
+  width: 100%;
+  height: 150px;
+
+  padding: 14px 20px;
+
+  border-radius: 0;
+  border: 0;
+  outline: 1px solid var(--color-neutral);
+
+  font-family: var(--font-family, sans-serif);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  color: var(--color-dark-lighten);
+
+  overflow: auto;
+  resize: none;
+
+  transition-property: outline;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+
+  &:hover,
+  &:--hover {
+    outline-color: var(--color-neutral-darken);
+  }
+
+  &:focus,
+  &--focus {
+    outline: 2px solid var(--color-dark-lighten);
+  }
+
+  &--error {
+    outline: 2px solid var(--color-status-error);
+  }
+}
+
+// Form Button Wrapper
+.form__button-wrapper {
+  display: grid;
+  gap: 20px;
+}
+
+// Form Button
+.form__button {
+
+}
+
+// Form Note
+.form__note {
+  justify-self: center;
+  margin: 0;
+
+  font-family: var(--font-family-secondary);
+  line-height: 16px;
+}

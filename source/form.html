@@ -58,106 +58,116 @@
   </header>
 
   <main class="main-container">
-    <section class="anketa">
-      <div class="anketa__container container">
-        <h1 class="anketa__title title-huge">Подбор программы</h1>
-        <p class="anketa__text title-small">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+    <section class="order">
+      <div class="order__container container">
+        <h1 class="order__title title-huge">Подбор программы</h1>
+        <p class="order__text title-small">Заполните анкету, и мы подберем <br>программу питания для вашего кота</p>
 
-        <form class="anketa__form form" action="https://echo.htmlacademy.ru/" method="post">
-          <fieldset class="form__group">
-            <legend class="form__title visually-hidden">Контактые данные (кота)</legend>
-            <p class="form__field">
-              <label class="form__label" for="#form-name-cat">Имя:*</label>
-              <input class="form__input" type="text" id="#form-name-cat" name="form-name-cat" placeholder="Чешир" required>
-            </p>
-            <p class="form__field">
-              <label class="form__label" for="#form-weight-cat">Вес (кг):*</label>
-              <input class="form__input" type="text" id="#form-weight-cat" name="form-weight-cat" placeholder="7" required>
-            </p>
-            <p class="form__field">
-              <label class="form__label" for="#form-year-cat">Возраст (лет):</label>
-              <input class="form__input" type="text" id="#form-year-cat" name="form-year-cat" placeholder="7">
-            </p>
-          </fieldset>
+        <form class="order__form form" action="https://echo.htmlacademy.ru/" method="post">
+          <div class="form__group-wrapper">
+            <fieldset class="form__group">
+              <legend class="form__title visually-hidden">Контактые данные (кота)</legend>
+              <p class="form__field">
+                <label class="form__label" for="#form-name-cat">Имя:*</label>
+                <input class="form__input" type="text" id="#form-name-cat" name="form-name-cat" placeholder="Чешир" required>
+              </p>
+              <p class="form__field">
+                <label class="form__label" for="#form-weight-cat">Вес (кг):*</label>
+                <input class="form__input" type="text" id="#form-weight-cat" name="form-weight-cat" placeholder="7" required>
+              </p>
+              <p class="form__field">
+                <label class="form__label" for="#form-year-cat">Возраст (лет):</label>
+                <input class="form__input" type="text" id="#form-year-cat" name="form-year-cat" placeholder="7">
+              </p>
+            </fieldset>
+          </div>
 
-          <fieldset class="form__group">
-            <legend class="form__title visually-hidden">Выберите цель.</legend>
-            <ul class="form__list form__list--radio">
-              <li class="form__item">
-                <label class="form__control">
-                  <input class="form__control-input form__control-input--radio" type="radio" name="form-goal" value="weight-loss" checked>
-                  <span class="form__contol-radio"></span>
-                  <span class="form__contol-text">Похудение</span>
-                </label>
-              </li>
-              <li class="form__item">
-                <label class="form__control">
-                  <input class="form__control-input form__control-input--radio" type="radio" name="form-goal" value="weight-increase">
-                  <span class="form__contol-radio"></span>
-                  <span class="form__contol-text">Набор массы</span>
-                </label>
-              </li>
-              <li class="form__item">
-                <label class="form__control">
-                  <input class="form__control-input form__control-input--radio" type="radio" name="form-goal" value="i-dont-know">
-                  <span class="form__contol-radio"></span>
-                  <span class="form__contol-text">Не знаю (нужен ваш совет)</span>
-                </label>
-              </li>
-            </ul>
-          </fieldset>
+          <div class="form__group-wrapper form__group-wrapper--accent">
+            <fieldset class="form__group">
+              <legend class="form__title visually-hidden">Выберите цель.</legend>
+              <ul class="form__list form__list--radio">
+                <li class="form__item">
+                  <label class="form__control">
+                    <input class="form__control-input form__control-input--radio" type="radio" name="form-goal" value="weight-loss" checked>
+                    <span class="form__contol-radio"></span>
+                    <span class="form__contol-text">Похудение</span>
+                  </label>
+                </li>
+                <li class="form__item">
+                  <label class="form__control">
+                    <input class="form__control-input form__control-input--radio" type="radio" name="form-goal" value="weight-increase">
+                    <span class="form__contol-radio"></span>
+                    <span class="form__contol-text">Набор массы</span>
+                  </label>
+                </li>
+                <li class="form__item">
+                  <label class="form__control">
+                    <input class="form__control-input form__control-input--radio" type="radio" name="form-goal" value="i-dont-know">
+                    <span class="form__contol-radio"></span>
+                    <span class="form__contol-text">Не знаю (нужен ваш совет)</span>
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+          </div>
 
-          <fieldset class="form__group">
-            <legend class="form__title title-big title-accent">Контактые данные (владельца кота)</legend>
-            <p class="form__field form__field--email">
-              <label class="form__label" for="#form-email">Email:*</label>
-              <input class="form__input" type="email" id="#form-email" name="form-email" placeholder="cheshire@gcat.cat" required>
-            </p>
-            <p class="form__field form__field--phone">
-              <label class="form__label" for="#form-phone">Телефон:*</label>
-              <input class="form__input" type="tel" id="#form-phone" name="form-phone" placeholder="8 (960) 900-60-90" required>
-            </p>
-          </fieldset>
+          <div class="form__group-wrapper">
+            <fieldset class="form__group">
+              <legend class="form__title title-big title-accent">Контактые данные <br>(владельца кота)</legend>
+              <p class="form__field form__field--email">
+                <label class="form__label" for="#form-email">Email:*</label>
+                <input class="form__input" type="email" id="#form-email" name="form-email" placeholder="cheshire@gcat.cat" required>
+              </p>
+              <p class="form__field form__field--phone">
+                <label class="form__label" for="#form-phone">Телефон:*</label>
+                <input class="form__input" type="tel" id="#form-phone" name="form-phone" placeholder="8 (960) 900-60-90" required>
+              </p>
+            </fieldset>
+          </div>
 
-          <fieldset class="form__group">
-            <legend class="form__title title-big">Комментарий</legend>
-            <label class="visually-hidden" for="#form-textarea">Расскажите обо всех повадках кота.</label>
-            <textarea class="form__textarea" type="email" id="#form-textarea" name="form-textarea" placeholder="Расскажите обо всех повадках кота"></textarea>
-          </fieldset>
+          <div class="form__group-wrapper">
+            <fieldset class="form__group">
+              <legend class="form__title title-big title-accent">Комментарий</legend>
+              <label class="visually-hidden" for="#form-textarea">Расскажите обо всех повадках кота.</label>
+              <textarea class="form__textarea" type="email" id="#form-textarea" name="form-textarea" placeholder="Расскажите обо всех повадках кота"></textarea>
+            </fieldset>
+          </div>
 
-          <fieldset class="form__group">
-            <legend class="form__title title-big title-accent">Дополнительно</legend>
-            <ul class="form__list form__list--mark">
-              <li class="form__item">
-                <label class="form__control">
-                  <input class="form__control-input form__control-input--mark visually-hidden" type="checkbox" name="form-additional-sweetener" checked>
-                  <span class="form__contol-mark"></span>
-                  <span class="form__contol-text">Cахарозаменитель</span>
-                </label>
-              </li>
-              <li class="form__item">
-                <label class="form__control">
-                  <input class="form__control-input form__control-input--mark visually-hidden" type="checkbox" name="form-additional-drinking-water">
-                  <span class="form__contol-mark"></span>
-                  <span class="form__contol-text">Питьевая вода</span>
-                </label>
-              </li>
-              <li class="form__item">
-                <label class="form__control">
-                  <input class="form__control-input form__control-input--mark visually-hidden" type="checkbox" name="form-additional-milk">
-                  <span class="form__contol-mark"></span>
-                  <span class="form__contol-text">Молоко</span>
-                </label>
-              </li>
-              <li class="form__item">
-                <label class="form__control">
-                  <input class="form__control-input form__control-input--mark visually-hidden" type="checkbox" name="form-additional-vitamins">
-                  <span class="form__contol-mark"></span>
-                  <span class="form__contol-text">Витманиы</span>
-                </label>
-              </li>
-            </ul>
-          </fieldset>
+          <div class="form__group-wrapper">
+            <fieldset class="form__group">
+              <legend class="form__title title-big title-accent">Дополнительно</legend>
+              <ul class="form__list form__list--mark">
+                <li class="form__item">
+                  <label class="form__control">
+                    <input class="form__control-input form__control-input--mark visually-hidden" type="checkbox" name="form-additional-sweetener" checked>
+                    <span class="form__contol-mark"></span>
+                    <span class="form__contol-text">Cахарозаменитель</span>
+                  </label>
+                </li>
+                <li class="form__item">
+                  <label class="form__control">
+                    <input class="form__control-input form__control-input--mark visually-hidden" type="checkbox" name="form-additional-drinking-water">
+                    <span class="form__contol-mark"></span>
+                    <span class="form__contol-text">Питьевая вода</span>
+                  </label>
+                </li>
+                <li class="form__item">
+                  <label class="form__control">
+                    <input class="form__control-input form__control-input--mark visually-hidden" type="checkbox" name="form-additional-milk">
+                    <span class="form__contol-mark"></span>
+                    <span class="form__contol-text">Молоко</span>
+                  </label>
+                </li>
+                <li class="form__item">
+                  <label class="form__control">
+                    <input class="form__control-input form__control-input--mark visually-hidden" type="checkbox" name="form-additional-vitamins">
+                    <span class="form__contol-mark"></span>
+                    <span class="form__contol-text">Витманиы</span>
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+          </div>
 
           <div class="form__button-wrapper">
             <button class="form__button button" type="submit">Отправить заявку</button>
@@ -176,8 +186,9 @@
           <address class="map__address text-medium-secondary">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
         </div>
 
-        <iframe class="map__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036257198484!2d30.320472477857102!3d59.93871916209306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1682669534205!5m2!1sru!2sru" width="320" height="362" allowfullscreen title="ул. Большая Конюшенная, д. 19/8 Санкт-Петербург"></iframe>
       </div>
+
+      <iframe class="map__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036257198484!2d30.320472477857102!3d59.93871916209306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1682669534205!5m2!1sru!2sru" width="320" height="362" allowfullscreen title="ул. Большая Конюшенная, д. 19/8 Санкт-Петербург"></iframe>
     </section>
   </main>
 

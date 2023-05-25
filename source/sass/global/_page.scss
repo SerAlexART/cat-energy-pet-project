@@ -12,6 +12,8 @@ html {
 
 .page {
   height: 100%;
+
+  overflow-x: hidden;
 }
 
 .page__body {
@@ -30,6 +32,8 @@ html {
   color: var(--color-dark);
 
   background-color: var(--color-main);
+
+  overflow-x: hidden;
 }
 
 .page__container {

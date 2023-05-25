@@ -1,12 +1,11 @@
 // Example
 .example {
+  background-color: var(--color-neutral);
 }
 
 // Example Container
 .example__container {
   padding: 25px var(--p-l-r) 40px;
-
-  background-color: var(--color-neutral);
 }
 
 // Example Title
