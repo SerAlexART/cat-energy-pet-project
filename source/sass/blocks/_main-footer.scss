@@ -15,6 +15,10 @@
 // Main Footer Logo
 .main-footer__logo {
   margin-bottom: 30px;
+
+  &--current:hover {
+    cursor: auto;
+  }
 }
 
 // Main Footer Social
