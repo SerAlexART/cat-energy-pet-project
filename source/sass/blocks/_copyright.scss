@@ -1,0 +1,35 @@
+// Copyright
+.copyright {
+
+}
+
+.copyright__link {
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  color: var(--color-dark-darken);
+
+  outline: 3px solid transparent;
+
+  transition-property: color, outline, opacity;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+
+  &:hover,
+  &:focus,
+  &:--hover,
+  &:--focus {
+    color: var(--color-accent);
+  }
+
+  &:focus-visible,
+  &:--focus-visible {
+    outline-color: var(--color-focus);
+  }
+
+  &:active,
+  &:--active {
+    opacity: 0.3;
+  }
+}

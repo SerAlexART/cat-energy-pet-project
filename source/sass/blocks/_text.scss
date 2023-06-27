@@ -1,0 +1,68 @@
+// Title
+.title-huge {
+  font-size: 36px;
+  line-height: 40px;
+}
+
+.title-big {
+  font-size: 24px;
+  line-height: 26px;
+}
+
+.title-medium {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.title-small {
+  font-size: 14px;
+  line-height: 18px;
+}
+
+// Text Secondary
+.text-big-secondary {
+  font-family: var(--font-family-secondary, sans-serif);
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.text-medium-secondary {
+  font-family: var(--font-family-secondary, sans-serif);
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.text-medium-small {
+  font-family: var(--font-family-secondary, sans-serif);
+  font-size: 12px;
+  line-height: 14px;
+}
+
+// Title Accent
+.title-accent {
+  position: relative;
+  display: inline-block;
+  max-width: 90%;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 60%;
+    top: 15px;
+
+    height: 2px;
+    width: 10000%;
+
+    background-color: var(--color-accent);
+  }
+
+  &::before {
+    left: calc(-10000% - var(--p-l-r));
+  }
+
+  &::after {
+    right: calc(-10000% - var(--p-l-r));
+  }
+}
+

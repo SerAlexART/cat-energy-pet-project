@@ -1,0 +1,371 @@
+// Form
+.form {
+
+}
+
+// Form Group Wrapper
+.form__group-wrapper {
+  padding: 20px 0 20px;
+}
+
+// Form Group Wrapper Accent
+.form__group-wrapper--accent {
+  position: relative;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+
+
+    height: 1px;
+    width: 10000%;
+
+    background-color: var(--color-neutral-darken);
+
+    transform: translateX(-50%);
+  }
+
+  &::before {
+    top: 0;
+  }
+
+  &::after {
+    bottom: 0;
+  }
+
+}
+
+// Form Group
+.form__group {
+  margin: 0;
+  padding: 20px 0 20px;
+  padding: 0;
+
+  border: none;
+}
+
+// Form Title
+.form__title {
+  margin-bottom: 35px;
+  padding: 0;
+}
+
+// Form Label
+.form__label {
+  font-size: 16px;
+  text-transform: uppercase;
+  color: var(--color-dark-lighten);
+}
+
+// Form Field
+.form__field {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  align-items: center;
+  gap: 13px;
+
+  margin: 0;
+
+  &:not(:last-child) {
+    margin-bottom: 14px;
+  }
+}
+
+// Form Input
+.form__input {
+  width: 100%;
+  padding: 14px 20px;
+
+  border-radius: 0;
+  border: 0;
+  outline: 1px solid var(--color-neutral);
+
+  font-family: var(--font-family, sans-serif);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  color: var(--color-dark-lighten);
+
+  background-color: var(--color-main);
+
+  transition-property: outline;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+
+
+  &:hover,
+  &:--hover {
+    outline-color: var(--color-neutral-darken);
+  }
+
+  &:focus,
+  &--focus {
+    outline: 2px solid var(--color-dark-lighten);
+  }
+
+  // &:focus-visible,
+  // &:--focus-visible {
+  //   outline-color: var(--color-focus);
+  // }
+
+  &--error {
+    outline: 2px solid var(--color-status-error);
+  }
+
+  &::placeholder {
+    color: var(--color-dark-lighten);
+  }
+}
+
+// Form Input Email
+.form__input--email {
+  position: relative;
+
+  padding-right: 60px;
+
+  background-image: url("../../img/icon/form-icon-email.svg");
+  background-repeat: no-repeat;
+  background-position: top 50% right 20px;
+  background-size: 20px;
+}
+
+// Form Input Phone
+.form__input--phone {
+  position: relative;
+
+  padding-right: 60px;
+
+  background-image: url("../../img/icon/form-icon-phone.svg");
+  background-repeat: no-repeat;
+  background-position: top 50% right 20px;
+  background-size: 20px;
+}
+
+// Form Textarea
+.form__textarea {
+  width: 100%;
+  height: 150px;
+
+  padding: 14px 20px;
+
+  border-radius: 0;
+  border: 0;
+  outline: 1px solid var(--color-neutral);
+
+  font-family: var(--font-family, sans-serif);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  color: var(--color-dark-lighten);
+
+  overflow: auto;
+  resize: none;
+
+  transition-property: outline;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+
+  &:hover,
+  &:--hover {
+    outline-color: var(--color-neutral-darken);
+  }
+
+  &:focus,
+  &--focus {
+    outline: 2px solid var(--color-dark-lighten);
+  }
+
+  &--error {
+    outline: 2px solid var(--color-status-error);
+  }
+}
+
+// Form Button Wrapper
+.form__button-wrapper {
+  display: grid;
+  gap: 20px;
+}
+
+// Form Button
+.form__button {
+
+}
+
+// Form Note
+.form__note {
+  justify-self: center;
+  margin: 0;
+
+  font-family: var(--font-family-secondary);
+  line-height: 16px;
+}
+
+
+// Form List
+.form__list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+// Form Item
+.form__item {
+  // min-height: 30px;
+}
+
+.form__item:not(:last-child) {
+  margin-bottom: 13px;
+}
+
+
+// Form Control
+.form__control {
+  position: relative;
+  display: block;
+  padding-top: 6px;
+  padding-left: 45px;
+  min-height: 30px;
+
+  cursor: pointer;
+
+  transition-property: opacity;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.3s;
+
+  // &:hover,
+  // &:--hover {
+  //   opacity: 0.8;
+  // }
+
+  // &:focus-visible,
+  // &:--focus-visible {
+  //   outline-color: var(--color-focus);
+  // }
+
+  &:active,
+  &:--active {
+    opacity: 0.8;
+  }
+}
+
+// Form Control Input
+.form__control-input {
+
+}
+
+.form__control-input:disabled ~ * {
+  opacity: 0.3;
+}
+
+
+// Form Contol Radio
+.form__contol-radio {
+  position: absolute;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 30px;
+
+  border-radius: 50%;
+  border: 1px solid var(--color-neutral-lighten);
+
+  background-color: var(--color-main);
+
+  transition-property: border-color;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.3s;
+}
+
+.form__control:hover .form__contol-radio {
+  border-color: var(--color-neutral-darken);
+}
+
+.form__control-input:focus-visible + .form__contol-radio {
+  border: 2px solid var(--color-dark-lighten);
+}
+
+.form__control-input[type="radio"]:checked + .form__contol-radio::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  display: block;
+  width: 50%;
+  height: 50%;
+
+  border-radius: 50%;
+
+  background-color: var(--color-accent);
+
+  transform: translate(-50%, -50%);
+
+  transition-property: opacity;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.3s;
+}
+
+.form__control:hover .form__control-input:disabled + .form__contol-radio {
+  border: 1px solid var(--color-neutral-lighten);
+}
+
+.form__control-input[type="radio"]:checked:hover + .form__contol-radio::before {
+  opacity: 0.8;
+}
+
+// Form Contol Mark
+.form__contol-mark {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 30px;
+  height: 30px;
+
+  border: 1px solid var(--color-neutral-lighten);
+
+  background-color: var(--color-main);
+
+  transition-property: border-color, opacity;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.3s;
+}
+
+.form__control:hover .form__contol-mark {
+  border-color: var(--color-neutral-darken);
+}
+
+.form__control-input:focus-visible + .form__contol-mark {
+  border: 2px solid var(--color-dark-lighten);
+}
+
+.form__control:hover .form__control-input:disabled + .form__contol-mark {
+  border: 1px solid var(--color-neutral-lighten);
+}
+
+.form__control-input[type="checkbox"]:checked:hover + .form__contol-mark {
+  opacity: 0.8;
+}
+
+.form__control-input:checked[type="checkbox"] + .form__contol-mark {
+  background-image: url("../../img/icon/form-icon-check.svg");
+  background-repeat: no-repeat;
+  background-size: 70%;
+  background-position: center;
+}
+
+// Form Contol Text
+.form__contol-text {
+  font-size: 16px;
+  text-transform: uppercase;
+  color: var(--color-dark-lighten);
+}
+

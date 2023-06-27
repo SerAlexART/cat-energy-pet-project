@@ -1,0 +1,42 @@
+// Program
+.program {
+  display: grid;
+  grid-template-columns: 67px 1fr;
+  row-gap: 20px;
+  column-gap: 15px;
+
+  padding: 20px;
+
+  background-color: var(--color-neutral);
+}
+
+// Program Title
+.program__title {
+  align-self: center;
+
+  margin: 0;
+
+  text-transform: uppercase;
+}
+
+// Program Text
+.program__text {
+  grid-column: 1 / -1;
+  margin: 0;
+  padding-bottom: 20px;
+
+  color: var(--color-dark-lighten);
+
+  border-bottom: 1px solid var(--color-border-neutral);
+}
+
+// Program Image
+.program__image {
+  grid-column-start: 1;
+  grid-row-start: 1;
+}
+
+// Program Link
+.program__link {
+  grid-column: 1 / -1;
+}

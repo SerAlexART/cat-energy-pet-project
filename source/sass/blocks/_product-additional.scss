@@ -1,0 +1,45 @@
+// Product Additional
+.product-additional {
+  display: grid;
+  grid-template-columns: 1fr 70px;
+  // grid-template-rows: 1fr 1fr 1fr;
+  gap: 15px;
+
+  padding: 15px 0;
+}
+
+// Product Additional Title
+.product-additional__title {
+  grid-column: 1 / -1;
+  grid-row: 1;
+
+  margin: 0;
+
+  line-height: 16px;
+  text-transform: uppercase;
+}
+
+// Product Additional Desription
+.product-additional__description {
+  line-height: 14px;
+
+  color: var(--color-dark-lighten);
+}
+
+// Product Additional Price
+.product-additional__price {
+  font-family: var(--font-family-secondary);
+  line-height: 14px;
+  text-align: right;
+
+  color: var(--color-dark-lighten);
+}
+
+// Product Additional Price Nimber
+.product-additional__price-number {
+}
+
+// Product Additional Button
+.product-additional__button {
+  grid-column: 1 / -1;
+}

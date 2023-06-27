@@ -1,13 +1,30 @@
 
 // Подключение базовых стилей
-@import "./global/_variables";
-@import "./global/_fonts";
-@import "./global/_mixins";
-@import "./global/_global";
+@use "./global/_global";
 
 // Подключение стилей блоков
-@import "./blocks/_text";
-@import "./blocks/_button";
-@import "./blocks/_main-header";
-@import "./blocks/_main-container";
-@import "./blocks/_main-footer";
+@use "./blocks/_text";
+@use "./blocks/_button";
+@use "./blocks/_logo";
+@use "./blocks/_main-header";
+@use "./blocks/_main-nav";
+@use "./blocks/_main-container";
+@use "./blocks/_hero";
+@use "./blocks/_programs";
+@use "./blocks/_program";
+@use "./blocks/_advantages";
+@use "./blocks/_steps";
+@use "./blocks/_example";
+@use "./blocks/_slider-compare";
+@use "./blocks/_statistics";
+@use "./blocks/_catalog";
+@use "./blocks/_product";
+@use "./blocks/_catalog-additional";
+@use "./blocks/_product-additional";
+@use "./blocks/_banner";
+@use "./blocks/_order";
+@use "./blocks/_form";
+@use "./blocks/_map";
+@use "./blocks/_main-footer";
+@use "./blocks/_social-list";
+@use "./blocks/_copyright";

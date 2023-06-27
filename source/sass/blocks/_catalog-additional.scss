@@ -1,0 +1,34 @@
+// Catalog Additional
+.catalog-additional {
+
+}
+
+// Catalog Additional Container
+.catalog-additional__container {
+  padding: 25px var(--p-l-r) 35px;
+}
+
+// Catalog Additional Title
+.catalog-additional__title {
+  margin: 0;
+  margin-bottom: 36px;
+}
+
+
+// Catalog Additional List
+.catalog-additional__list {
+  margin: 0;
+  margin-bottom: 35px;
+  padding: 0;
+
+  list-style: none;
+}
+
+// Catalog Additional Item
+.catalog-additional__item {
+  border-bottom: 1px solid var(--color-neutral-darken);
+
+  &:first-child {
+    border-top: 1px solid var(--color-neutral-darken);
+  }
+}

@@ -1,0 +1,20 @@
+// Programs
+.programs {
+}
+
+// Programs Container
+.programs__container {
+  padding: 10px var(--p-l-r);
+}
+
+// Programs List
+.programs__list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}

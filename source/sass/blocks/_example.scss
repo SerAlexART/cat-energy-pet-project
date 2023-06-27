@@ -1,0 +1,41 @@
+// Example
+.example {
+  background-color: var(--color-neutral);
+}
+
+// Example Container
+.example__container {
+  padding: 25px var(--p-l-r) 40px;
+}
+
+// Example Title
+.example__title {
+  margin: 0;
+  margin-bottom: 40px;
+}
+
+// Example Text
+.example__text {
+  margin: 0;
+  margin-bottom: 20px;
+
+  color: var(--color-dark-lighten);
+}
+
+// Example Result
+.example__result {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 30px;
+
+  margin-bottom: 20px;
+}
+
+// Example Price
+.example__price {
+  margin: 0;
+  margin-bottom: 20px;
+
+  text-align: center;
+  text-transform: uppercase;
+}

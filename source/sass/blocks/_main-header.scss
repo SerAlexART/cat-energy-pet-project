@@ -1,3 +1,36 @@
-// .main-header {
+// Main Header
+.main-header {
+  background-color: var(--color-main);
+}
 
-// }
+// Main Header Top
+.main-header__top {
+  display: grid;
+  grid-template-columns: 1fr 24px;
+  align-items: center;
+  column-gap: 10px;
+
+  padding: 10px var(--p-l-r) 20px;
+}
+
+// Main Header Logo
+.main-header__logo {
+
+}
+
+// Main Header Logo Current
+.main-header__logo--current {
+  cursor: auto;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+// Main Header Toogle
+.main-header__toogle {
+  width: 24px;
+  height: 24px;
+
+  background-color: var(--color-accent);
+}

@@ -1,0 +1,48 @@
+// Main Nav
+.main-nav {
+  display: block;
+
+  &--open {
+    display: block;
+  }
+
+  &--closed {
+    display: none;
+  }
+}
+
+// Main Wrapper
+.main-nav__wrapper {
+
+}
+
+// Main Nav List
+.main-nav__list {
+  display: flex;
+  flex-direction: column;
+
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--color-border-neutral);
+
+  list-style: none;
+
+  &--closed {
+    display: none;
+  }
+
+  &--open {
+    display: flex;
+  }
+}
+
+// Main Nav Item
+.main-nav__item {
+  border-bottom: 1px solid var(--color-border-neutral);
+}
+
+// Main Nav Link
+.main-nav__link {
+  display: block;
+  height: 100%;
+}

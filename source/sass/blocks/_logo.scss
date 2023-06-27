@@ -1,0 +1,60 @@
+// Logo
+.logo {
+  display: inline-block;
+
+  outline: 3px solid transparent;
+  border: none;
+
+  cursor: pointer;
+
+  transition-property: opacity, outline;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+
+  &:hover,
+  &:focus,
+  &:--hover,
+  &:--focus {
+    opacity: 0.8;
+  }
+
+  &:focus-visible,
+  &:--focus-visible {
+    outline-color: var(--color-focus);
+  }
+
+  &:active,
+  &:--active {
+    opacity: 0.6;
+  }
+}
+
+// Logo Footer
+.logo-footer {
+  display: inline-block;
+  outline: 3px solid transparent;
+  border: none;
+
+  cursor: pointer;
+
+  transition-property: opacity, outline;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+
+  &:hover,
+  &:focus,
+  &:--hover,
+  &:--focus {
+    opacity: 0.8;
+  }
+
+  &:focus-visible,
+  &:--focus-visible {
+    outline-color: var(--color-focus);
+  }
+
+  &:active,
+  &:--active {
+    opacity: 0.6;
+  }
+}

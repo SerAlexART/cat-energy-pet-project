@@ -1,0 +1,78 @@
+// Hero
+.hero {
+  position: relative;
+
+  // background-color: red;
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -10;
+
+    width: 100%;
+    min-width: 320px;
+    height: 62%;
+    top: 0;
+    right: 0;
+    // bottom: 38%;
+    left: 0;
+
+    background-color: var(--color-accent);
+    background-image: url("../../img/background/background-hero-mobile-1@1.jpg");
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: -5;
+
+    width: 100%;
+    min-width: 320px;
+    height: 62%;
+    top: 0;
+    right: 0;
+    // bottom: 38%;
+    left: 0;
+
+    background-color: var(--color-accent);
+
+    opacity: 0.85;
+  }
+}
+
+// Hero Container
+.hero__container {
+  position: relative;
+  z-index: 10;
+  padding: 25px var(--p-l-r) 10px;
+
+  text-align: center;
+  color: var(--color-main);
+}
+
+// Hero Title
+.hero__title {
+  margin: 0;
+  margin-bottom: 25px;
+}
+
+// Hero Text
+.hero__text {
+  margin: 0;
+  margin-bottom: 30px;
+
+  text-transform: uppercase;
+}
+
+// Hero Image
+.hero__image {
+  margin-bottom: 2px;
+}
+
+// Hero Button
+.hero__button {
+  display: block;
+}
