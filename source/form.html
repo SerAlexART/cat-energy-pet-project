@@ -64,56 +64,59 @@
         <p class="order__text title-small">Заполните анкету, и мы подберем <br>программу питания для вашего кота</p>
 
         <form class="order__form form" action="https://echo.htmlacademy.ru/" method="post">
-          <div class="form__group-wrapper">
-            <fieldset class="form__group">
-              <legend class="form__title visually-hidden">Контактые данные (кота)</legend>
-              <p class="form__field">
-                <label class="form__label" for="#form-name-cat">Имя:*</label>
-                <input class="form__input" type="text" id="#form-name-cat" name="form-name-cat" placeholder="Чешир" required>
-              </p>
-              <p class="form__field">
-                <label class="form__label" for="#form-weight-cat">Вес (кг):*</label>
-                <input class="form__input" type="text" id="#form-weight-cat" name="form-weight-cat" placeholder="7" required>
-              </p>
-              <p class="form__field">
-                <label class="form__label" for="#form-year-cat">Возраст (лет):</label>
-                <input class="form__input" type="text" id="#form-year-cat" name="form-year-cat" placeholder="7">
-              </p>
-            </fieldset>
+
+          <div class="form__two-columns">
+            <div class="form__group-wrapper form__group-wrapper--contacts">
+              <fieldset class="form__group">
+                <legend class="form__title visually-hidden">Контактые данные (кота)</legend>
+                <p class="form__field">
+                  <label class="form__label" for="#form-name-cat">Имя:*</label>
+                  <input class="form__input" type="text" id="#form-name-cat" name="form-name-cat" placeholder="Чешир" required>
+                </p>
+                <p class="form__field">
+                  <label class="form__label" for="#form-weight-cat">Вес (кг):*</label>
+                  <input class="form__input" type="text" id="#form-weight-cat" name="form-weight-cat" placeholder="7" required>
+                </p>
+                <p class="form__field">
+                  <label class="form__label" for="#form-year-cat">Возраст (лет):</label>
+                  <input class="form__input" type="text" id="#form-year-cat" name="form-year-cat" placeholder="7">
+                </p>
+              </fieldset>
+            </div>
+
+            <div class="form__group-wrapper form__group-wrapper--accent">
+              <fieldset class="form__group">
+                <legend class="form__title visually-hidden">Выберите цель.</legend>
+                <ul class="form__list form__list--radio">
+                  <li class="form__item">
+                    <label class="form__control">
+                      <input class="form__control-input form__control-input--radio visually-hidden" type="radio" name="form-goal" value="weight-loss" checked>
+                      <span class="form__contol-radio"></span>
+                      <span class="form__contol-text">Похудение</span>
+                    </label>
+                  </li>
+                  <li class="form__item">
+                    <label class="form__control">
+                      <input class="form__control-input form__control-input--radio visually-hidden" type="radio" name="form-goal" value="weight-increase">
+                      <span class="form__contol-radio"></span>
+                      <span class="form__contol-text">Набор массы</span>
+                    </label>
+                  </li>
+                  <li class="form__item">
+                    <label class="form__control">
+                      <input class="form__control-input form__control-input--radio visually-hidden" type="radio" name="form-goal" value="i-dont-know">
+                      <span class="form__contol-radio"></span>
+                      <span class="form__contol-text">Не знаю (нужен ваш совет)</span>
+                    </label>
+                  </li>
+                </ul>
+              </fieldset>
+            </div>
           </div>
 
-          <div class="form__group-wrapper form__group-wrapper--accent">
-            <fieldset class="form__group">
-              <legend class="form__title visually-hidden">Выберите цель.</legend>
-              <ul class="form__list form__list--radio">
-                <li class="form__item">
-                  <label class="form__control">
-                    <input class="form__control-input form__control-input--radio visually-hidden" type="radio" name="form-goal" value="weight-loss" checked>
-                    <span class="form__contol-radio"></span>
-                    <span class="form__contol-text">Похудение</span>
-                  </label>
-                </li>
-                <li class="form__item">
-                  <label class="form__control">
-                    <input class="form__control-input form__control-input--radio visually-hidden" type="radio" name="form-goal" value="weight-increase">
-                    <span class="form__contol-radio"></span>
-                    <span class="form__contol-text">Набор массы</span>
-                  </label>
-                </li>
-                <li class="form__item">
-                  <label class="form__control">
-                    <input class="form__control-input form__control-input--radio visually-hidden" type="radio" name="form-goal" value="i-dont-know">
-                    <span class="form__contol-radio"></span>
-                    <span class="form__contol-text">Не знаю (нужен ваш совет)</span>
-                  </label>
-                </li>
-              </ul>
-            </fieldset>
-          </div>
-
           <div class="form__group-wrapper">
             <fieldset class="form__group">
-              <legend class="form__title title-big title-accent">Контактые данные <br>(владельца кота)</legend>
+              <legend class="form__title title-big title-accent">Контактые данные <br class="form__title__br">(владельца кота)</legend>
               <p class="form__field form__field--email">
                 <label class="form__label" for="#form-email">Email:*</label>
                 <input class="form__input form__input--email" type="email" id="#form-email" name="form-email" placeholder="cheshire@gcat.cat" required>

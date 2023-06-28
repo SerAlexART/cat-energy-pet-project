@@ -1,6 +1,16 @@
+@use "../global/_global";
+
 // Form
 .form {
+}
 
+// Form Two-Columns
+.form__two-columns {
+  @include global.desctop {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+  }
 }
 
 // Form Group Wrapper
@@ -25,6 +35,10 @@
     background-color: var(--color-neutral-darken);
 
     transform: translateX(-50%);
+
+    @include global.tablet {
+      display: none;
+    }
   }
 
   &::before {
@@ -35,6 +49,19 @@
     bottom: 0;
   }
 
+  @include global.tablet {
+    padding: 25px;
+
+    border: 1px solid var(--color-neutral);
+  }
+
+}
+
+// Form Group Wrapper Contacts
+.form__group-wrapper--contacts {
+  @include global.desctop {
+    padding: 0;
+  }
 }
 
 // Form Group
@@ -50,6 +77,13 @@
 .form__title {
   margin-bottom: 35px;
   padding: 0;
+}
+
+// Form Title BR
+.form__title__br {
+  @include global.tablet {
+    display: none;
+  }
 }
 
 // Form Label
@@ -117,6 +151,8 @@
 
   &::placeholder {
     color: var(--color-dark-lighten);
+
+    opacity: 1;
   }
 }
 
@@ -182,17 +218,34 @@
   &--error {
     outline: 2px solid var(--color-status-error);
   }
+
+  &::placeholder {
+    color: var(--color-dark-lighten);
+
+    opacity: 1;
+  }
 }
 
 // Form Button Wrapper
 .form__button-wrapper {
   display: grid;
   gap: 20px;
+
+
+  @include global.tablet {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 30px 60px;
+  }
+
+  @include global.desctop {
+    gap: 30px 80px;
+  }
 }
 
 // Form Button
 .form__button {
-
+  grid-column: 1;
 }
 
 // Form Note
@@ -202,6 +255,10 @@
 
   font-family: var(--font-family-secondary);
   line-height: 16px;
+
+  @include global.tablet {
+    justify-self: left;
+  }
 }
 
 
@@ -212,6 +269,21 @@
 
   list-style: none;
 }
+
+// Form List Mark
+.form__list--mark {
+  @include global.tablet {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px 60px;
+  }
+
+  @include global.desctop {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px 80px;
+  }
+}
+
 
 // Form Item
 .form__item {

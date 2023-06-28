@@ -1,3 +1,5 @@
+@use "../global/_global";
+
 // Steps
 .steps {
   display: flex;
@@ -7,6 +9,17 @@
   padding: 0;
 
   list-style: none;
+
+  @include global.tablet {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 60px;
+  }
+
+  @include global.desctop {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px 80px;
+  }
 }
 
 // Stepst Items
@@ -25,7 +38,21 @@
 
   margin: 0;
   align-items: center;
+
   color: var(--color-dark-lighten);
+
+
+  @include global.tablet {
+    grid-template-columns: 80px 1fr;
+    grid-template-rows: 80px 1fr;
+    gap: 30px;
+
+    min-height: 280px;
+
+    // grid-column-start: 1;
+    // grid-row-start: 2;
+  }
+
 
   &::after {
     content: "";
@@ -42,6 +69,10 @@
     background-repeat: no-repeat;
     background-position: center;
 
+    @include global.tablet {
+      width: 80px;
+      height: 80px;
+    }
   }
 
   &--leaf {
@@ -68,4 +99,12 @@
     }
   }
 
+}
+
+
+// Steps Description
+.steps__description {
+  @include global.tablet {
+    grid-column: 1/-1;
+  }
 }
