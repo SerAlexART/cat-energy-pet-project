@@ -1,3 +1,5 @@
+@use "../global/_global";
+
 // Banner
 .banner {
   position: relative;
@@ -16,6 +18,16 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+
+  @include global.tablet {
+    min-height: 200px;
+    padding: 60px 75px 60px 420px;
+  }
+
+  @include global.desctop {
+    height: 100%;
+    padding: 160px 40px 40px;
+  }
 
   &::before {
     content: "";
@@ -49,6 +61,20 @@
     background-size: cover;
 
     transform: translateX(-50%);
+
+    @include global.tablet {
+      top: 50%;
+      left: 75px;
+
+      transform: translate(-50%, -50%);
+    }
+
+    @include global.desctop {
+      top: 60px;
+      left: 50%;
+
+      transform: translateX(-50%);
+    }
   }
 }
 
@@ -58,4 +84,8 @@
   z-index: 10;
 
   margin: 0;
+
+  @include global.tablet {
+   align-self: center;
+  }
 }

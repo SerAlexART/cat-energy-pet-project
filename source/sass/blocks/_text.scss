@@ -1,22 +1,53 @@
+@use "../global/_global";
+
 // Title
 .title-huge {
   font-size: 36px;
   line-height: 40px;
+
+  @include global.tablet {
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  @include global.desctop {
+
+  }
 }
 
 .title-big {
   font-size: 24px;
   line-height: 26px;
+
+  @include global.tablet {
+    font-size: 36px;
+    line-height: 40px;
+  }
+
+  @include global.desctop {
+
+  }
 }
 
 .title-medium {
   font-size: 16px;
   line-height: 20px;
+
+  @include global.tablet {
+    font-size: 20px;
+    line-height: 26px;
+  }
+
 }
 
 .title-small {
   font-size: 14px;
   line-height: 18px;
+
+  @include global.tablet {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 
 // Text Secondary
@@ -24,18 +55,33 @@
   font-family: var(--font-family-secondary, sans-serif);
   font-size: 16px;
   line-height: 20px;
+
+  @include global.tablet {
+    font-size: 20px;
+    line-height: 26px;
+  }
 }
 
 .text-medium-secondary {
   font-family: var(--font-family-secondary, sans-serif);
   font-size: 14px;
   line-height: 18px;
+
+  @include global.tablet {
+    font-size: 16px;
+    line-height: 20px;
+  }
 }
 
 .text-medium-small {
   font-family: var(--font-family-secondary, sans-serif);
   font-size: 12px;
   line-height: 14px;
+
+  @include global.tablet {
+    font-size: 16px;
+    line-height: 18px;
+  }
 }
 
 // Title Accent
@@ -58,11 +104,19 @@
   }
 
   &::before {
-    left: calc(-10000% - var(--p-l-r));
+    left: calc(-10000% - 20px);
+
+    @include global.tablet {
+      left: calc(-10000% - 40px);
+    }
   }
 
   &::after {
-    right: calc(-10000% - var(--p-l-r));
+    right: calc(-10000% - 20px);
+
+    @include global.tablet {
+      right: calc(-10000% - 40px);
+    }
   }
 }
 

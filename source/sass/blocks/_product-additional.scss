@@ -1,3 +1,5 @@
+@use "../global/_global";
+
 // Product Additional
 .product-additional {
   display: grid;
@@ -6,17 +8,38 @@
   gap: 15px;
 
   padding: 15px 0;
+
+  @include global.tablet {
+    gap: 20px;
+
+    padding: 25px 40px;
+
+    grid-template-columns: 1fr minmax(100px, 200px) 70px;
+  }
+
+  @include global.tablet {
+    gap: 40px;
+    align-items: center;
+
+    padding: 15px 0;
+
+    grid-template-columns: 1fr 1fr 60px 245px;
+  }
 }
 
 // Product Additional Title
 .product-additional__title {
   grid-column: 1 / -1;
-  grid-row: 1;
+  grid-row-start: 1;
 
   margin: 0;
 
   line-height: 16px;
   text-transform: uppercase;
+
+  @include global.tablet {
+    grid-column: 1/2;
+  }
 }
 
 // Product Additional Desription
@@ -24,6 +47,13 @@
   line-height: 14px;
 
   color: var(--color-dark-lighten);
+
+  @include global.tablet {
+    grid-column-start: 2;
+    grid-row-start: 1;
+
+    text-align: right;
+  }
 }
 
 // Product Additional Price
@@ -31,8 +61,14 @@
   font-family: var(--font-family-secondary);
   line-height: 14px;
   text-align: right;
+  white-space: nowrap;
 
   color: var(--color-dark-lighten);
+
+  @include global.tablet {
+    grid-column-start: 3;
+    grid-row-start: 1;
+  }
 }
 
 // Product Additional Price Nimber
@@ -42,4 +78,8 @@
 // Product Additional Button
 .product-additional__button {
   grid-column: 1 / -1;
+
+  @include global.tablet {
+    grid-column: -2/-1;
+  }
 }

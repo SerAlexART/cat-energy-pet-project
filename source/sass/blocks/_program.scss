@@ -73,12 +73,11 @@
 .program__image {
   grid-column-start: 1;
   grid-row-start: 1;
+  justify-self: center;
 
   @include global.tablet {
     grid-column-start: 2;
     grid-row: 1 / 4;
-
-    justify-self: center;
    }
 
    @include global.desctop {

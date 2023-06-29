@@ -1,3 +1,5 @@
+@use "../global/_global";
+
 // Catalog
 .catalog {
 
@@ -22,6 +24,17 @@
   padding: 0;
 
   list-style: none;
+
+  @include global.tablet {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px;
+  }
+
+  @include global.desctop {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 80px 60px;
+  }
 }
 
 // Catalog Item
@@ -41,6 +54,10 @@
     background-color: var(--color-neutral-darken);
 
     transform: translateX(-50%);
+
+    @include global.tablet {
+      display: none;
+    }
   }
 
   &::before {
@@ -61,10 +78,25 @@
 
 // Catalog Item More
 .catalog__item--more {
-  background-color: aqua;
+  // grid-column-start: -2;
+  // grid-row-start: -1;
+
+
+  @include global.tablet {
+    padding-top: 70px;
+  }
+
+  @include global.desctop {
+    padding-top: 80px;
+  }
 }
 
 // Catalog Button
 .catalog__button {
   width: 100%;
+  height: 100%;
+
+  @include global.tablet {
+    border: 1px solid var(--color-neutral);
+  }
 }
