@@ -1,17 +1,70 @@
+@use "../global/_global";
+
 // Example
 .example {
-  background-color: var(--color-neutral);
+  position: relative;
+
+  // background-color: var(--color-main);
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -5;
+
+    width: 100%;
+    height: 100%;
+    // top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    background-color: var(--color-neutral);
+
+
+    @include global.tablet {
+      height: 45%;
+      // top: 0;
+      // right: 0;
+      // bottom: 0;
+      // left: 0;
+    }
+
+    @include global.desctop {
+      height: 80%;
+    }
+  }
 }
 
 // Example Container
 .example__container {
   padding: 25px var(--p-l-r) 40px;
+
+  @include global.desctop {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+
+  }
+}
+
+// Example Content
+.example__content {
+  @include global.desctop {
+   display: flex;
+   flex-direction: column;
+
+   max-width: 440px;
+   }
 }
 
 // Example Title
 .example__title {
   margin: 0;
   margin-bottom: 40px;
+
+  @include global.desctop {
+   margin-bottom: auto;
+  }
 }
 
 // Example Text
@@ -20,6 +73,27 @@
   margin-bottom: 20px;
 
   color: var(--color-dark-lighten);
+
+  @include global.desctop {
+    margin-bottom: 70px;
+   }
+}
+
+
+// Example Two Columns
+.example__two-columns {
+  @include global.tablet {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+  }
+
+  @include global.desctop {
+    grid-template-columns: 1fr;
+    gap: 55px;
+
+    max-width: 366px;
+  }
 }
 
 // Example Result
@@ -29,6 +103,10 @@
   column-gap: 30px;
 
   margin-bottom: 20px;
+
+  @include global.desctop {
+   margin-bottom: 0;
+  }
 }
 
 // Example Price
@@ -38,4 +116,18 @@
 
   text-align: center;
   text-transform: uppercase;
+
+  @include global.tablet {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  @include global.desctop {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+
+    margin-bottom: 0;
+  }
 }

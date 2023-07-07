@@ -114,6 +114,19 @@
   transition-duration: 0.3s;
   transition-timing-function: ease-in-out;
 
+  @include global.tablet {
+    padding: 0;
+
+    font-size: 18px;
+    line-height: 24px;
+
+    background-color: transparent;
+  }
+
+  @include global.desctop {
+    // color: var(--color-main);
+  }
+
   &:hover,
   &:focus,
   &:--hover,
@@ -150,6 +163,25 @@
   &:--active {
     color: var(--color-accent-dark);
   }
+
+  @include global.tablet {
+    position: relative;
+
+    color: var(--color-dark);
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -8px;
+
+      height: 2px;
+      width: 100%;
+
+      background-color: var(--color-accent);
+    }
+  }
 }
 
 // Button More
@@ -185,10 +217,11 @@
 
   @include global.tablet {
     padding: 40px;
-    padding-top: 160px;
+    padding-top: 170px;
   }
 
   @include global.desctop {
+    padding-top: 160px;
     padding-bottom: 50px;
   }
 
@@ -245,7 +278,7 @@
 .button-more__text {
   margin-bottom: 20px;
 
-  line-height: 16px;
+  line-height: 30px;
 }
 
 // Button More Button

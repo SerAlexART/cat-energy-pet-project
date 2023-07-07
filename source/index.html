@@ -18,8 +18,8 @@
 
 <body class="page__body">
   <!-- <div class="page__container"> -->
-  <header class="main-header">
-    <div class="main-header__container container">
+  <header class="main-header main-header--main">
+    <div class="main-header__container main-header__container--main container">
       <div class="main-header__top">
         <a class="main-header__logo main-header__logo--current logo">
           <span class="visually-hidden">Логотип сайта «Cat Energy».</span>
@@ -60,10 +60,12 @@
   <main class="main-container">
     <section class="hero">
       <div class="hero__container container">
-        <h1 class="hero__title hero__title--indent title-huge">Функциональное питание для котов</h1>
-        <p class="hero__text hero__text--indent title-small">Занялся собой? Займись котом!</p>
-        <img class="hero__image" src="./img/hero/hero-cat-energy-pro-mobile-1@1.png" width="280" height="270" alt="Оранжевая баночка корма «Cat Energy» PRO с курицей." />
-        <a class="hero__button hero__button--indent button" href="form.html">Подобрать программу</a>
+        <div class="hero__content">
+          <h1 class="hero__title title-huge">Функциональное питание для котов</h1>
+          <p class="hero__text title-small">Занялся собой? Займись котом!</p>
+          <img class="hero__image" src="./img/hero/hero-cat-energy-pro-mobile-1@1.png" width="280" height="270" alt="Оранжевая баночка корма «Cat Energy» PRO с курицей." />
+          <a class="hero__button button" href="form.html">Подобрать программу</a>
+        </div>
       </div>
     </section>
 
@@ -129,26 +131,30 @@
 
     <section class="example">
       <div class="example__container container">
-        <h2 class="example__title title-huge">Живой пример</h2>
-        <p class="example__text text-medium-secondary">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
+        <div class="example__content">
+          <h2 class="example__title title-huge">Живой пример</h2>
+          <p class="example__text text-medium-secondary">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
 
-        <div class="example__result">
-          <div class="statistics__wrapper">
-            <div class="statistics">
-              <p class="statistics__data title-big"><b class="statistics__number">5</b> <span class="statistics__value">кг</span></p>
-              <span class="statistics__description text-medium-small">Снижение веса</span>
-            </div>
-          </div>
+          <div class="example__two-columns">
+            <div class="example__result">
+              <div class="statistics__wrapper">
+                <div class="statistics">
+                  <p class="statistics__data title-big"><b class="statistics__number">5</b> <span class="statistics__value">кг</span></p>
+                  <span class="statistics__description text-medium-small">Снижение веса</span>
+                </div>
+              </div>
 
-          <div class="statistics__wrapper">
-            <div class="statistics">
-              <p class="statistics__data title-big"><b class="statistics__number">60</b> <span class="statistics__value">дней</span></p>
-              <span class="statistics__description text-medium-small title-medium">Затрачено времени</span>
+              <div class="statistics__wrapper">
+                <div class="statistics">
+                  <p class="statistics__data title-big"><b class="statistics__number">60</b> <span class="statistics__value">дней</span></p>
+                  <span class="statistics__description text-medium-small title-medium">Затрачено времени</span>
+                </div>
+              </div>
             </div>
+
+            <p class="example__price title-small">Затраты на питание: <span class="example__price-info"><span class="example__price-number">15 000</span> руб.</span></p>
           </div>
         </div>
-
-        <p class="example__price title-small">Затраты на питание: <span class="example__price-number">15 000</span> руб.</p>
 
         <div class="example-slider-compare slider-compare">
           <div class="slider-compare__before">

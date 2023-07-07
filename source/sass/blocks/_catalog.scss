@@ -80,6 +80,7 @@
 .catalog__item--more {
   // grid-column-start: -2;
   // grid-row-start: -1;
+  order: 5;
 
 
   @include global.tablet {
