@@ -1,3 +1,5 @@
+@use "_mixins";
+
 :root {
   // Base
   --font-family: "Oswald", sans-serif;
@@ -31,16 +33,24 @@
   --color-focus: #D24899;
 
   // Width
-  --width-mobile: 320px;
+  // --width-mobile: 320px;
 
-  --width-mobile-only: 767px;
+  // --width-mobile-only: 767px;
 
-  --width-tablet: 768px;
+  // --width-tablet: 768px;
 
-  --width-desctop: 1200px;
+  // --width-desctop: 1200px;
 
   // Padding
   --p-l-r: 20px;
+
+  @include mixins.tablet {
+    --p-l-r: 70px;
+  }
+
+  @include mixins.desctop {
+    --p-l-r: 110px;
+  }
 
   --p-l-r-tablet: 60px;
 
@@ -74,13 +84,13 @@
 // $color-focus: #D24899;
 
 // // Width
-// $width-mobile: 320px;
+$width-mobile: 320px;
 
-// $width-mobile-only: 767px;
+$width-mobile-only: 767px;
 
-// $width-tablet: 768px;
+$width-tablet: 768px;
 
-// $width-desctop: 1200px;
+$width-desctop: 1200px;
 
 // // Padding
 // $p-l-r: 20px;

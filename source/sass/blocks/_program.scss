@@ -1,3 +1,5 @@
+@use "../global/_global";
+
 // Program
 .program {
   display: grid;
@@ -8,6 +10,22 @@
   padding: 20px;
 
   background-color: var(--color-neutral);
+
+  @include global.tablet {
+    grid-template-columns: 1fr 270px;
+    gap: 20px;
+
+    padding: 55px;
+    padding-top: 75px;
+  }
+
+
+  @include global.desctop {
+    grid-template-columns: 134px 1fr;
+    gap: 30px;
+
+    padding-top: 40px;
+  }
 }
 
 // Program Title
@@ -17,6 +35,15 @@
   margin: 0;
 
   text-transform: uppercase;
+
+  @include global.tablet {
+   grid-column-start: 1;
+   grid-row-start: 1;
+  }
+
+  @include global.desctop {
+    grid-column-start: 2;
+  }
 }
 
 // Program Text
@@ -28,15 +55,67 @@
   color: var(--color-dark-lighten);
 
   border-bottom: 1px solid var(--color-border-neutral);
+
+  @include global.tablet {
+    grid-column: 1 / 2;
+    grid-row-start: 2;
+
+    border: none;
+   }
+
+   @include global.desctop {
+    grid-column-start: 2;
+    grid-row-start: 2;
+   }
 }
 
 // Program Image
 .program__image {
   grid-column-start: 1;
   grid-row-start: 1;
+  justify-self: center;
+
+  @include global.tablet {
+    grid-column-start: 2;
+    grid-row: 1 / 4;
+   }
+
+   @include global.desctop {
+    grid-column-start: 1;
+    grid-row-start: 1;
+   }
+
+   &--slim {
+    @include global.tablet {
+      width: 200px;
+     }
+
+     @include global.desctop {
+      width: 100px;
+     }
+   }
+
+   &--pro {
+    @include global.tablet {
+      width: 270px;
+     }
+
+     @include global.desctop {
+      width: 134px;
+     }
+   }
 }
 
 // Program Link
 .program__link {
   grid-column: 1 / -1;
+
+  @include global.tablet {
+    grid-column: 1 / 2;
+   }
+
+   @include global.desctop {
+     grid-column: 1 / -1;
+     grid-row-start: 3;
+   }
 }

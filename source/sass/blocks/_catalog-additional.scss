@@ -1,6 +1,17 @@
+@use "../global/_global";
+
 // Catalog Additional
 .catalog-additional {
 
+}
+
+// Catalog Additional Wrapper
+.catalog-additional__wrapper {
+  @include global.desctop {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 80px;
+  }
 }
 
 // Catalog Additional Container
@@ -22,6 +33,11 @@
   padding: 0;
 
   list-style: none;
+
+  @include global.desctop {
+    margin: 0;
+
+  }
 }
 
 // Catalog Additional Item
@@ -30,5 +46,15 @@
 
   &:first-child {
     border-top: 1px solid var(--color-neutral-darken);
+  }
+
+  @include global.tablet {
+    border-right: 1px solid var(--color-neutral-darken);
+    border-left: 1px solid var(--color-neutral-darken);
+  }
+
+  @include global.tablet {
+    border-right: none;
+    border-left: none;
   }
 }

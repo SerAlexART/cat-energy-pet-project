@@ -1,6 +1,49 @@
+@use "../global/_global";
+
 // Main Header
 .main-header {
   background-color: var(--color-main);
+
+  @include global.tablet {
+    background-color: transparent;
+   }
+}
+
+// Main Header Main
+.main-header--main {
+  @include global.desctop {
+   position: absolute;
+   z-index: 100;
+   right: 0;
+   left: 0;
+
+   width: 100%;
+  }
+}
+
+// Main Header Container
+.main-header__container {
+
+  @include global.tablet {
+    display: grid;
+    grid-template-columns: 174px 1fr;
+    gap: 60px;
+
+    padding: 25px var(--p-l-r);
+  }
+
+  @include global.desctop {
+    grid-template-columns: 200px 1fr;
+    gap: 80px;
+  }
+}
+
+// Main Header Container Main
+.main-header__container--main {
+  @include global.desctop {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
 }
 
 // Main Header Top
@@ -10,12 +53,19 @@
   align-items: center;
   column-gap: 10px;
 
-  padding: 10px var(--p-l-r) 20px;
+  padding: 10px var(--p-l-r) 25px;
+
+  @include global.tablet {
+    display: flex;
+    align-items: start;
+
+    padding: 0;
+  }
 }
 
 // Main Header Logo
 .main-header__logo {
-
+  margin-bottom: 15px;
 }
 
 // Main Header Logo Current
@@ -33,4 +83,8 @@
   height: 24px;
 
   background-color: var(--color-accent);
+
+  @include global.tablet {
+   display: none;
+   }
 }

@@ -1,31 +1,69 @@
-/* stylelint-disable */
+// Desctop First - Max Graph
 
-@mixin for-desktop {
-  @media (min-width: (1025px)) {
+// @mixin for-desktop {
+//   @media (min-width: (1025px)) {
+//     @content;
+//   }
+// }
+
+// @mixin big-desktop {
+//   @media (max-width: (1440px)) {
+//     @content;
+//   }
+// }
+
+// @mixin tablet {
+//   @media (max-width: (1024px)) {
+//     @content;
+//   }
+// }
+
+// @mixin small-tablet {
+//   @media (max-width: (768px)) {
+//     @content;
+//   }
+// }
+
+// @mixin mobile {
+//   @media (max-width: (576px)) {
+//     @content;
+//   }
+// }
+
+// Mobile First
+
+@mixin mobile {
+  @media (min-width: (320px)) {
     @content;
   }
 }
 
-@mixin big-desktop {
-  @media (max-width: (1440px)) {
+@mixin mobile-only {
+  @media (min-width: (767px)) {
     @content;
   }
 }
 
 @mixin tablet {
-  @media (max-width: (1024px)) {
+  @media (min-width: (768px)) {
     @content;
   }
 }
 
-@mixin small-tablet {
-  @media (max-width: (768px)) {
+@mixin desctop {
+  @media (min-width: (1200px)) {
     @content;
   }
 }
 
-@mixin mobile {
-  @media (max-width: (576px)) {
-    @content;
-  }
-}
+// Example Use Mobile First
+
+// @use "../global/_global";
+
+// @include global.tablet {
+
+// }
+
+// @media (min-width: global.$tablet) {
+
+// }

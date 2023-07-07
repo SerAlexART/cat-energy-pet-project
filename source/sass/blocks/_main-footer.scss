@@ -1,3 +1,5 @@
+@use "../global/_global";
+
 // Main Footer
 .main-footer {
   background-color: var( --color-neutral);
@@ -10,6 +12,12 @@
   align-items: center;
 
   padding: 40px var(--p-l-r) 20px;
+
+  @include global.tablet {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 30px;
+   }
 }
 
 // Main Footer Logo
@@ -29,6 +37,10 @@
 
   border-top: 1px solid var(--color-border-neutral);
   border-bottom: 1px solid var(--color-border-neutral);
+
+  @include global.tablet {
+    border: none;
+   }
 }
 
 // Main Footer Social List

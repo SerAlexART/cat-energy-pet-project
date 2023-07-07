@@ -1,3 +1,5 @@
+@use "../global/_global";
+
 // Button
 .button {
   display: inline-block;
@@ -9,6 +11,7 @@
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
+  text-align: center;
   text-decoration: none;
   color: var(--color-main);
 
@@ -111,6 +114,19 @@
   transition-duration: 0.3s;
   transition-timing-function: ease-in-out;
 
+  @include global.tablet {
+    padding: 0;
+
+    font-size: 18px;
+    line-height: 24px;
+
+    background-color: transparent;
+  }
+
+  @include global.desctop {
+    // color: var(--color-main);
+  }
+
   &:hover,
   &:focus,
   &:--hover,
@@ -147,6 +163,25 @@
   &:--active {
     color: var(--color-accent-dark);
   }
+
+  @include global.tablet {
+    position: relative;
+
+    color: var(--color-dark);
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -8px;
+
+      height: 2px;
+      width: 100%;
+
+      background-color: var(--color-accent);
+    }
+  }
 }
 
 // Button More
@@ -179,6 +214,17 @@
   transition-duration: 0.3s;
   transition-timing-function: ease-in-out;
 
+
+  @include global.tablet {
+    padding: 40px;
+    padding-top: 170px;
+  }
+
+  @include global.desctop {
+    padding-top: 160px;
+    padding-bottom: 50px;
+  }
+
   &:hover,
   &:focus,
   &:--hover,
@@ -201,26 +247,23 @@
   &::after {
     content: "";
     position: absolute;
+    top: 35px;
+
     width: 30px;
     height: 2px;
 
     background-color: var(--color-neutral-darken);
+
+    @include global.tablet {
+      width: 60px;
+
+      top: 80px;
+    }
   }
 
   &::before {
     content: "";
-    top: 35px;
-
     transform: rotate(90deg);
-  }
-
-  &::after {
-    content: "";
-    top: 35px;
-
-    &:hover {
-      background-color: red;
-    }
   }
 }
 
@@ -235,12 +278,13 @@
 .button-more__text {
   margin-bottom: 20px;
 
-  line-height: 16px;
+  line-height: 30px;
 }
 
 // Button More Button
 .button-more__button {
   width: 100%;
+  margin-top: auto;
   padding: 14px 26px;
 
   font-family: var(--font-family, sans-serif);

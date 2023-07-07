@@ -1,3 +1,5 @@
+@use "../global/_global";
+
 // Main Nav
 .main-nav {
   display: block;
@@ -13,7 +15,9 @@
 
 // Main Wrapper
 .main-nav__wrapper {
-
+  @include global.tablet {
+   padding-top: 10px;
+  }
 }
 
 // Main Nav List
@@ -34,11 +38,29 @@
   &--open {
     display: flex;
   }
+
+
+  @include global.tablet {
+    flex-direction: row;
+    justify-content: end;
+    flex-wrap: wrap;
+
+    border: none;
+  }
 }
 
 // Main Nav Item
 .main-nav__item {
   border-bottom: 1px solid var(--color-border-neutral);
+
+  @include global.tablet {
+    flex-direction: row;
+
+    margin-right: 30px;
+    margin-bottom: 15px;
+
+    border: none;
+  }
 }
 
 // Main Nav Link
