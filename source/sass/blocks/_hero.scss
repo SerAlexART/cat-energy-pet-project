@@ -161,6 +161,8 @@
 
   @include global.tablet {
     margin-bottom: 40px;
+
+    text-shadow: 2px 2px var(--color-main);
   }
 
   @include global.desctop {
@@ -179,6 +181,8 @@
   @include global.tablet {
     font-size: 20px;
     line-height: 20px;
+
+    text-shadow: 2px 2px var(--color-main);
   }
 
   @include global.desctop {
