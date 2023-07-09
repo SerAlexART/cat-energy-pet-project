@@ -45,11 +45,12 @@
   --p-l-r: 20px;
 
   @include mixins.tablet {
-    --p-l-r: 70px;
+    --p-l-r: 30px;
   }
 
   @include mixins.desctop {
-    --p-l-r: 110px;
+    // --p-l-r: 110px;
+    // --p-l-r: 60px;
   }
 
   --p-l-r-tablet: 60px;

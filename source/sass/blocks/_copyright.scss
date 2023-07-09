@@ -1,12 +1,12 @@
 // Copyright
 .copyright {
-
+text-align: right;
 }
 
 .copyright__link {
-  display: block;
-  width: 100%;
-  height: 100%;
+  display: inline-block;
+  // width: 100%;
+  // height: 100%;
 
   color: var(--color-dark-darken);
 

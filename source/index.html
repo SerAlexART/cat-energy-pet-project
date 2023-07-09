@@ -5,7 +5,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Функциональное питание для котов «Cat Energy»</title>
-  <link rel="icon" href="favicon.ico" />
+  <link rel="icon" href="favicon.ico" /> <!-- 32x32 -->
   <link rel="icon" href="img/favicon/favicon-icon.svg" type="image/svg+xml" />
   <link rel="apple-touch-icon" href="img/favicon/apple-icon-180x180.png" />
   <link rel="manifest" href="manifest.webmanifest" />
@@ -61,9 +61,18 @@
     <section class="hero">
       <div class="hero__container container">
         <div class="hero__content">
-          <h1 class="hero__title title-huge">Функциональное питание для котов</h1>
+          <h1 class="hero__title title-huge">Функциональное <br>питание для&nbsp;котов</h1>
           <p class="hero__text title-small">Занялся собой? Займись котом!</p>
-          <img class="hero__image" src="./img/hero/hero-cat-energy-pro-mobile-1@1.png" width="280" height="270" alt="Оранжевая баночка корма «Cat Energy» PRO с курицей." />
+
+          <picture class="hero__image">
+            <source media="(min-width: 1200px)" srcset="./img/hero/hero-cat-energy-pro-desctop-1@1.webp 1x, ./img/hero/hero-cat-energy-pro-desctop-1@2.webp 2x">
+            <source media="(min-width: 768px)" srcset="./img/hero/hero-cat-energy-pro-tablet-1@1.webp 1x, ./img/hero/hero-cat-energy-pro-tablet-1@2.webp 2x">
+            <source type="image/webp" srcset="./img/hero/hero-cat-energy-pro-mobile-1@1.webp 1x, ./img/hero/hero-cat-energy-pro-mobile-1@2.webp 2x">
+
+            <source media="(min-width:1200px)" srcset="./img/hero/hero-cat-energy-pro-desctop-1@1.png 1x, ./img/hero/hero-cat-energy-pro-desctop-1@2.png 2x">
+            <source media="(min-width:768px)" srcset="./img/hero/hero-cat-energy-pro-tablet-1@1.png 1x, ./img/hero/hero-cat-energy-pro-tablet-1@2.png 2x">
+            <img class="hero__image" src="./img/hero/hero-cat-energy-pro-mobile-1@1.png" srcset="./img/hero/hero-cat-energy-pro-mobile-1@2.png 2x" width="280" height="270" alt="Оранжевая баночка корма «Cat Energy» PRO с курицей." />
+          </picture>
           <a class="hero__button button" href="form.html">Подобрать программу</a>
         </div>
       </div>
@@ -78,7 +87,7 @@
             <article class="programs__card program">
               <h2 class="program__title title-big">Похудение</h2>
               <img class="program__image program__image--slim" src="./img/program/program-cat-slim.svg" width="50" height="53" alt="Чёрный силуэт стройного кота на фоне зелёного круга." />
-              <p class="program__text text-medium-secondary">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
+              <p class="program__text text-medium-secondary">Ваш кот весит больше собаки и&nbsp;почти утратил способность лазить по&nbsp;деревьям? Пора на&nbsp;диету! Cat&nbsp;Energy&nbsp;Slim поможет вашему питомцу сбросить лишний&nbsp;вес.</p>
               <a class="program__link button-info" href="form.html">Каталог Slim
                 <span class="button-info__arrow">
                   <svg class="button-info__image" width="32" height="12" fill="currentColor" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
@@ -93,7 +102,7 @@
             <article class="programs__card program">
               <h2 class="program__title title-big">Набор массы</h2>
               <img class="program__image program__image--pro" src="./img/program/program-cat-pro.svg" width="67" height="50" alt="Чёрный силуэт стройного кота на фоне зелёного круга." />
-              <p class="program__text text-medium-secondary">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
+              <p class="program__text text-medium-secondary">Заработать авторитет среди дворовых котов и&nbsp;даже собак? Серия Cat&nbsp;Energy&nbsp;Pro поможет вашему коту нарастить необходимые мышцы!</p>
               <a class="program__link button-info" href="form.html">Каталог Pro
                 <span class="button-info__arrow">
                   <svg class="button-info__image" width="32" height="12" fill="currentColor" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
@@ -117,13 +126,13 @@
             <p class="steps__text text-medium-secondary">Функциональное питание содержит только полезные питательные вещества.</p>
           </li>
           <li class="steps__item steps__item--water">
-            <p class="steps__text text-medium-secondary">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</p>
+            <p class="steps__text text-medium-secondary">Выпускается в виде порошка, который нужно лишь залить кипятком и&nbsp;готово.</p>
           </li>
           <li class="steps__item steps__item--eat">
-            <p class="steps__text text-medium-secondary">Замените один-два приема обычной еды на наше функциональное питание.</p>
+            <p class="steps__text text-medium-secondary">Замените один-два приема обычной еды на&nbsp;наше функциональное питание.</p>
           </li>
           <li class="steps__item steps__item--time">
-            <p class="steps__text text-medium-secondary">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</p>
+            <p class="steps__text text-medium-secondary">Уже через месяц наслаждайтесь изменениями к&nbsp;лучшему вашего питомца!</p>
           </li>
         </ol>
       </div>
@@ -133,26 +142,26 @@
       <div class="example__container container">
         <div class="example__content">
           <h2 class="example__title title-huge">Живой пример</h2>
-          <p class="example__text text-medium-secondary">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
+          <p class="example__text text-medium-secondary">Борис сбросил 5&nbsp;кг за 2&nbsp;месяца, просто заменив свой обычный корм на&nbsp;Cat&nbsp;Energy&nbsp;Slim. Отличный результат без изнуряющих тренировок! При&nbsp;этом он&nbsp;не&nbsp;менял своих привычек и&nbsp;по-прежнему спит по&nbsp;16&nbsp;часов в&nbsp;день.</p>
 
           <div class="example__two-columns">
             <div class="example__result">
               <div class="statistics__wrapper">
                 <div class="statistics">
                   <p class="statistics__data title-big"><b class="statistics__number">5</b> <span class="statistics__value">кг</span></p>
-                  <span class="statistics__description text-medium-small">Снижение веса</span>
+                  <span class="statistics__description text-medium-small">Снижение <br>веса</span>
                 </div>
               </div>
 
               <div class="statistics__wrapper">
                 <div class="statistics">
                   <p class="statistics__data title-big"><b class="statistics__number">60</b> <span class="statistics__value">дней</span></p>
-                  <span class="statistics__description text-medium-small title-medium">Затрачено времени</span>
+                  <span class="statistics__description text-medium-small title-medium">Затрачено <br>времени</span>
                 </div>
               </div>
             </div>
 
-            <p class="example__price title-small">Затраты на питание: <span class="example__price-info"><span class="example__price-number">15 000</span> руб.</span></p>
+            <p class="example__price title-small">Затраты на&nbsp;питание: <span class="example__price-info"><span class="example__price-number">15 000</span> руб.</span></p>
           </div>
         </div>
 
@@ -182,8 +191,8 @@
         <h2 class="visually-hidden">Как до нас добраться.</h2>
 
         <div class="map__content">
-          <p class="map__text title-medium">Приглашаем к сотрудничеству дилеров!</p>
-          <address class="map__address text-medium-secondary">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
+          <p class="map__text title-medium">Приглашаем <br>к&nbsp;сотрудничеству <br>дилеров!</p>
+          <address class="map__address text-medium-secondary">ул. Большая <br>Конюшенная, д. 19/8 <br>Санкт-Петербург</address>
         </div>
       </div>
 

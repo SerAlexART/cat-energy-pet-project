@@ -26,6 +26,11 @@
   transition-duration: 0.3s;
   transition-timing-function: ease-in-out;
 
+  @include global.tablet {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
   &:hover,
   &:focus,
   &:--hover,
@@ -124,7 +129,7 @@
   }
 
   @include global.desctop {
-    // color: var(--color-main);
+    font-size: 20px;
   }
 
   &:hover,
@@ -174,7 +179,7 @@
       position: absolute;
       left: 0;
       right: 0;
-      bottom: -8px;
+      bottom: -10px;
 
       height: 2px;
       width: 100%;
@@ -272,6 +277,10 @@
   margin-bottom: 8px;
 
   text-transform: uppercase;
+
+  @include global.tablet {
+    margin-bottom: 20px;
+  }
 }
 
 // Button More Text
@@ -279,6 +288,11 @@
   margin-bottom: 20px;
 
   line-height: 30px;
+
+  @include global.tablet {
+    font-size: 16px;
+    line-height: 18px;
+  }
 }
 
 // Button More Button

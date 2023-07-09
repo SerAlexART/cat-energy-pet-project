@@ -1,3 +1,5 @@
+@use "../global/_global";
+
 // Statistics
 .statistics {
   position: relative;
@@ -21,6 +23,11 @@
   // margin-bottom: 5px;
 
   text-transform: uppercase;
+
+  @include global.tablet {
+    font-size: 30px;
+    line-height: 37px;
+  }
 }
 
 // Statistics Description
@@ -42,6 +49,11 @@
   background-color: var(--color-neutral);
 
   transform: translateX(-50%);
+
+  @include global.tablet {
+    font-size: 14px;
+    line-height: 14px;
+  }
 
   &::before,
   &::after {

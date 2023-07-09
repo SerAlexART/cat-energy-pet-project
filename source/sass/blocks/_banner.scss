@@ -10,6 +10,9 @@
   min-height: 290px;
   padding: 160px 60px 40px;
 
+  font-family: var(--font-family-secondary, sans-serif);
+  font-size: 16px;
+  line-height: 20px;
   text-align: center;
   color: var(--color-main);
 
@@ -19,14 +22,34 @@
   background-position: center;
   background-size: cover;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../img/background/background-gift-mobile-1@2.png");
+  }
+
   @include global.tablet {
+    justify-content: flex-end;
+
     min-height: 200px;
     padding: 60px 75px 60px 420px;
+
+    background-image: url("../../img/background/background-gift-tablet-1@1.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/background/background-gift-tablet-1@2.png");
+    }
   }
 
   @include global.desctop {
+    justify-content: center;
+
     height: 100%;
     padding: 160px 40px 40px;
+
+    background-image: url("../../img/background/background-gift-mobile-1@1.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/background/background-gift-mobile-1@2.png");
+    }
   }
 
   &::before {
@@ -84,8 +107,16 @@
   z-index: 10;
 
   margin: 0;
+  width: 100%;
+  max-width: 200px;
 
   @include global.tablet {
    align-self: center;
+
+   text-align: left;
+  }
+
+  @include global.desctop {
+    text-align: center;
   }
 }

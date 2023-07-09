@@ -25,6 +25,11 @@
     background-position: top center;
     background-size: cover;
 
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/background/background-hero-mobile-1@2.jpg");
+      background-size: cover;
+    }
+
     @include global.tablet {
       display: none;
 
@@ -36,8 +41,15 @@
 
       display: block;
 
+      background-image: url("../../img/background/background-hero-desctop-1@1.jpg");
+
       width: 50%;
       height: 100%;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../../img/background/background-hero-desctop-1@2.jpg");
+        background-size: cover;
+      }
     }
   }
 
@@ -115,7 +127,7 @@
 
   width: 100%;
   height: 100%;
-  border: 1px solid red;
+  // border: 1px solid red;
 
   text-align: center;
   color: var(--color-main);
@@ -148,18 +160,12 @@
   margin-bottom: 25px;
 
   @include global.tablet {
-    &--indent {
-      // max-width: 420px;
-      // margin-left: 80px;
-      // padding-top: 220px;
-
-      text-shadow: 2px 2px 0 var(--color-main);
-    }
+    margin-bottom: 40px;
   }
 
   @include global.desctop {
    grid-column-start: 1;
-   align-self: end;
+  //  align-self: end;
   }
 }
 
@@ -171,10 +177,8 @@
   text-transform: uppercase;
 
   @include global.tablet {
-    &--indent {
-      // max-width: 420px;
-      // margin-left: 80px;
-    }
+    font-size: 20px;
+    line-height: 20px;
   }
 
   @include global.desctop {
@@ -185,6 +189,8 @@
 // Hero Image
 .hero__image {
   // margin-bottom: 2px;
+
+  object-fit: contain;
 
 
   @include global.tablet {
@@ -204,14 +210,14 @@
     max-width: 709px;
     margin-top: -10%;
 
-    border: 1px solid red;
+    // border: 1px solid red;
   }
 
   @include global.desctop {
     position: absolute;
     z-index: -1;
     // top: 50%;
-    bottom: 50px;
+    bottom: 40px;
     left: 65%;
 
     max-width: 552px;
@@ -232,7 +238,7 @@
     grid-row-start: 3;
     grid-column-start: 1;
 
-    margin-top: 30px;
+    margin-top: 20px;
     margin-right: auto;
     width: auto;
 
@@ -245,6 +251,6 @@
   @include global.desctop {
     align-self: start;
 
-    margin-top: 0;
+    margin-top: 20px;
   }
 }

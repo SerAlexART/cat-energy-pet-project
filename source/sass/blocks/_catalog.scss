@@ -7,7 +7,11 @@
 
 // Catalog Container
 .catalog__container {
-  padding: 25px var(--p-l-r) 25px;
+  padding: 25px var(--p-l-r);
+
+  @include global.tablet {
+    padding: 35px var(--p-l-r);
+  }
 }
 
 // Catalog Container Title
@@ -16,6 +20,16 @@
   margin-bottom: 35px;
 
   line-height: 36px;
+
+  @include global.tablet {
+    margin-bottom: 60px;
+
+    line-height: 60px;
+  }
+
+  @include global.desctop {
+    margin-bottom: 80px;
+  }
 }
 
 // Catalog List

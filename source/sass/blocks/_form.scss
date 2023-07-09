@@ -10,12 +10,18 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 60px;
+
+    margin-bottom: 35px;
   }
 }
 
 // Form Group Wrapper
 .form__group-wrapper {
-  padding: 20px 0 20px;
+  padding: 20px 0;
+
+  @include global.tablet {
+    padding: 35px ;
+  }
 }
 
 // Form Group Wrapper Accent
@@ -77,6 +83,12 @@
 .form__title {
   margin-bottom: 35px;
   padding: 0;
+
+  @include global.tablet {
+    margin-bottom: 75px;
+
+    line-height: 36px;
+  }
 }
 
 // Form Title BR
@@ -91,6 +103,10 @@
   font-size: 16px;
   text-transform: uppercase;
   color: var(--color-dark-lighten);
+
+  @include global.tablet {
+    font-size: 20px;
+  }
 }
 
 // Form Field
@@ -129,6 +145,10 @@
   transition-duration: 0.3s;
   transition-timing-function: ease-in-out;
 
+  @include global.tablet {
+    font-size: 20px;
+    line-height: 20px;
+  }
 
   &:hover,
   &:--hover {
@@ -166,6 +186,15 @@
   background-repeat: no-repeat;
   background-position: top 50% right 20px;
   background-size: 20px;
+
+  &:focus,
+  &--focus {
+    background-image: url("../../img/icon/form-icon-email-current.svg");
+  }
+
+  &--error {
+    background-image: url("../../img/icon/form-icon-email-error.svg");
+  }
 }
 
 // Form Input Phone
@@ -178,6 +207,15 @@
   background-repeat: no-repeat;
   background-position: top 50% right 20px;
   background-size: 20px;
+
+  &:focus,
+  &--focus {
+    background-image: url("../../img/icon/form-icon-phone-current.svg");
+  }
+
+  &--error {
+    background-image: url("../../img/icon/form-icon-phone-error.svg");
+  }
 }
 
 // Form Textarea
@@ -196,6 +234,7 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 16px;
+  text-transform: uppercase;
   color: var(--color-dark-lighten);
 
   overflow: auto;
@@ -204,6 +243,11 @@
   transition-property: outline;
   transition-duration: 0.3s;
   transition-timing-function: ease-in-out;
+
+  @include global.tablet {
+    font-size: 20px;
+    line-height: 30px;
+  }
 
   &:hover,
   &:--hover {
@@ -439,5 +483,10 @@
   font-size: 16px;
   text-transform: uppercase;
   color: var(--color-dark-lighten);
+
+  @include global.tablet {
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 

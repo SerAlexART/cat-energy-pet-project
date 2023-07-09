@@ -21,9 +21,10 @@
 
   display: grid;
   grid-template-columns: 1fr 1fr;
+  align-items: center;
   gap: 30px;
 
-  padding: 26px 70px;
+  padding: 26px 20px;
 
   background-color: var( --color-main);
 
@@ -70,6 +71,7 @@
   color: var(--color-dark-lighten);
 
   @include global.tablet {
+    font-size: 16px;
     text-align: right;
   }
 
