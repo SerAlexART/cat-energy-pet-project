@@ -56,3 +56,18 @@
 .main-footer__social-list {
   justify-content: center;
 }
+
+// Main Footer Copyright
+.main-footer__copyright {
+
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+
+  @include global.tablet {
+    width: auto;
+
+    justify-content: flex-end;
+   }
+}

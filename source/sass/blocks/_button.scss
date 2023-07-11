@@ -165,16 +165,17 @@
     color: var(--color-accent);
   }
 
-
-  &:active,
-  &:--active {
-    color: var(--color-accent-dark);
-  }
-
   @include global.tablet {
     position: relative;
 
     color: var(--color-dark);
+
+    &:hover,
+    &:focus,
+    &:--hover,
+    &:--focus {
+      color: var(--color-dark);
+    }
 
     &::before {
       content: "";
@@ -218,6 +219,14 @@
 .button-header--hero-current {
   @include global.desctop {
     color: var(--color-main);
+
+    &:hover,
+    &:focus,
+    &:--hover,
+    &:--focus {
+      opacity: 1;
+    }
+
 
     &::before {
       content: "";
