@@ -12,6 +12,10 @@
     gap: 60px;
 
     margin-bottom: 35px;
+
+    &--contacts {
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -20,7 +24,7 @@
   padding: 20px 0;
 
   @include global.tablet {
-    padding: 35px ;
+    padding: 35px 0;
   }
 }
 

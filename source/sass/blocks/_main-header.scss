@@ -9,8 +9,8 @@
    }
 }
 
-// Main Header Main
-.main-header--main {
+// Main Header Hero
+.main-header--hero {
   @include global.desctop {
    position: absolute;
    z-index: 100;
@@ -38,8 +38,8 @@
   }
 }
 
-// Main Header Container Main
-.main-header__container--main {
+// Main Header Container Hero
+.main-header__container--hero {
   @include global.desctop {
     grid-template-columns: 1fr 1fr;
     gap: 20px;

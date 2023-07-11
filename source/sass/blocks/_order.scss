@@ -10,7 +10,7 @@
   padding: 25px var(--p-l-r) 30px;
 
   @include global.tablet {
-    padding: 35px var(--p-l-r) 70px;
+    padding: 35px 70px 70px;
   }
 
   @include global.desctop {

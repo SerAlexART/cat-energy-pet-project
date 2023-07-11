@@ -115,7 +115,7 @@
 
   cursor: pointer;
 
-  transition-property: background-color, color, outline;
+  transition-property: background-color, color, outline, opacity;
   transition-duration: 0.3s;
   transition-timing-function: ease-in-out;
 
@@ -151,6 +151,8 @@
   }
 }
 
+
+// Button Header Current
 .button-header--current {
   color: var(--color-accent);
 
@@ -188,6 +190,42 @@
     }
   }
 }
+
+// Button Header Hero
+.button-header--hero {
+  @include global.desctop {
+    color: var(--color-main);
+
+    &:hover,
+    &:focus,
+    &:--hover,
+    &:--focus {
+      color: var(--color-main);
+
+      opacity: 0.8;
+    }
+
+    &:active,
+    &:--active {
+      color: var(--color-main);
+
+      opacity: 0.3;
+    }
+  }
+}
+
+// Button Header Hero Current
+.button-header--hero-current {
+  @include global.desctop {
+    color: var(--color-main);
+
+    &::before {
+      content: "";
+      background-color: var(--color-main);
+    }
+  }
+}
+
 
 // Button More
 .button-more {
