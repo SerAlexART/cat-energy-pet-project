@@ -141,13 +141,14 @@
 
     text-align: left;
     color: var(--color-dark);
+    margin-left: 90px;
   }
 
   @include global.desctop {
     // grid-template-columns: 1fr 1fr;
     // grid-template-rows: 1fr auto 1fr;
 
-    width: calc(50% - 80px);
+    width: calc(50% - 120px);
     // align-self: center;
     margin-top: 10%;
     // min-height: 700px;
