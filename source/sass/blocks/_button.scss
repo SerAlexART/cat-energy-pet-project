@@ -159,9 +159,7 @@
   cursor: auto;
 
   &:hover,
-  &:focus,
-  &:--hover,
-  &:--focus {
+  &:--hover {
     color: var(--color-accent);
   }
 

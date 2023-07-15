@@ -24,6 +24,8 @@
 
 // Main Footer Logo
 .main-footer__logo {
+  justify-self: start;
+
   margin-bottom: 30px;
 
   @include global.tablet {

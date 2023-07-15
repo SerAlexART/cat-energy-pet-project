@@ -101,3 +101,13 @@
     opacity: 0.6;
   }
 }
+
+// Logo Footer Current
+.logo-footer--current {
+  cursor: auto;
+
+  &:hover,
+  &:--hover {
+    opacity: 1;
+  }
+}
