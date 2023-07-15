@@ -159,3 +159,15 @@
     margin-bottom: 0;
   }
 }
+
+// Example Slider Compare
+.example-slider-compare {
+  margin: 0 auto;
+
+  @include global.desctop {
+    align-self: start;
+    justify-self: end;
+
+    margin: 0;
+  }
+}

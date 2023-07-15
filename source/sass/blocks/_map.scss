@@ -4,7 +4,36 @@
 .map {
   position: relative;
 
+  min-height: 362px;
+
   background-color: var( --color-main);
+  background-image: url("../../img/map/map-mobile-1@1.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../img/map/map-mobile-1@2.png");
+  }
+
+  @include global.tablet {
+    min-height: 400px;
+
+    background-image: url("../../img/map/map-tablet-1@1.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/map/map-tablet-1@2.png");
+    }
+  }
+
+  @include global.desctop {
+    background-image: url("../../img/map/map-desctop-1@1.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/map/map-desctop-1@2.png");
+    }
+  }
+
 }
 
 // Map Container
