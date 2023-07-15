@@ -3,6 +3,7 @@
 // Main Nav
 .main-nav {
   display: block;
+  display: none;
 
   &--open {
     display: block;
@@ -11,6 +12,10 @@
   &--closed {
     display: none;
   }
+
+  @include global.tablet {
+    display: block;
+   }
 }
 
 // Main Wrapper

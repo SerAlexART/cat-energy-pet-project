@@ -4,6 +4,7 @@
 .map {
   position: relative;
 
+  margin-top: auto;
   min-height: 362px;
 
   background-color: var( --color-main);
@@ -76,6 +77,14 @@
     gap: 60px;
 
     padding: 60px 80px;
+  }
+
+  &--error {
+    background-color: var(--color-neutral);
+
+    @include global.desctop {
+      background-color: var( --color-main);
+    }
   }
 }
 

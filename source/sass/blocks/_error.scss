@@ -1,0 +1,210 @@
+@use "../global/_global";
+
+// Error
+.error {
+  position: relative;
+
+  display: flex;
+  flex-grow: 1;
+
+  // background-color: red;
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -10;
+
+    width: 100%;
+    min-width: 320px;
+    height: 62%;
+    top: 0;
+    right: 0;
+    // bottom: 38%;
+    left: 0;
+
+    background-color: var(--color-accent);
+    background-image: url("../../img/background/background-hero-mobile-1@1.jpg");
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/background/background-hero-mobile-1@2.jpg");
+      background-size: cover;
+    }
+
+    @include global.tablet {
+      display: none;
+
+      pointer-events: none;
+    }
+
+    @include global.desctop {
+      left: 50%;
+
+      display: block;
+
+      background-image: url("../../img/background/background-hero-desctop-1@1.jpg");
+
+
+      width: 50%;
+      height: 100%;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../../img/background/background-hero-desctop-1@2.jpg");
+        background-size: cover;
+      }
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: -5;
+
+    width: 100%;
+    min-width: 320px;
+    height: 62%;
+    top: 0;
+    right: 0;
+    // bottom: 38%;
+    left: 0;
+
+    background-color: var(--color-accent);
+
+    opacity: 0.85;
+
+    @include global.tablet {
+      display: none;
+    }
+
+    @include global.desctop {
+      left: 50%;
+
+      display: block;
+
+      width: 50%;
+      height: 100%;
+    }
+  }
+}
+
+// Error Container
+.error__container {
+  position: relative;
+  z-index: 10;
+
+  display: flex;
+  flex-direction: column;
+
+  min-height: 250px;
+
+  padding: 25px var(--p-l-r) 25px;
+
+
+  @include global.desctop {
+    padding: 50px var(--p-l-r) 50px;
+    min-height: 500px;
+  }
+}
+
+// Error Content
+.error__content {
+  flex-grow: 1;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
+  height: 100%;
+  // border: 1px solid red;
+
+  text-align: center;
+  color: var(--color-main);
+
+  @include global.tablet {
+    // display: grid;
+    // grid-template-rows: auto auto auto 1fr;
+    align-items: start;
+
+    height: auto;
+
+    text-align: left;
+    color: var(--color-dark);
+    margin-left: 90px;
+  }
+
+  @include global.desctop {
+    // grid-template-columns: 1fr 1fr;
+    // grid-template-rows: 1fr auto 1fr;
+
+    width: calc(50% - 120px);
+    // align-self: center;
+    margin-top: 10%;
+    // min-height: 700px;
+  }
+}
+
+// Error Title
+.error__title {
+  margin: 0;
+  margin-bottom: 25px;
+
+  @include global.tablet {
+    margin-bottom: 40px;
+
+    text-shadow: 2px 2px var(--color-main);
+  }
+
+  @include global.desctop {
+   grid-column-start: 1;
+  //  align-self: end;
+  }
+}
+
+// Error Text
+.error__text {
+  margin: 0;
+  margin-bottom: 30px;
+
+  text-transform: uppercase;
+
+  @include global.tablet {
+    font-size: 20px;
+    line-height: 20px;
+
+    text-shadow: 2px 2px var(--color-main);
+  }
+
+  @include global.desctop {
+    grid-column-start: 1;
+   }
+}
+
+// Error Button
+.error__button {
+  width: 100%;
+
+  margin-top: auto;
+
+  @include global.tablet {
+    grid-row-start: 3;
+    grid-column-start: 1;
+
+    margin-top: 20px;
+    margin-right: auto;
+    width: auto;
+
+    // &--indent {
+    //   max-width: 420px;
+    //   margin-left: 80px;
+    // }
+  }
+
+  @include global.desctop {
+    align-self: start;
+
+    margin-top: 20px;
+  }
+}
