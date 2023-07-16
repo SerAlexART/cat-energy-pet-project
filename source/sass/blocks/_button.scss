@@ -382,8 +382,10 @@
 
 // Button Info
 .button-info {
+  justify-self: start;
+
   display: grid;
-  grid-template-columns: max-content 32px;
+  grid-template-columns: auto 32px;
   gap: 25px;
   align-items: center;
 
