@@ -2,6 +2,9 @@
 
 // Main Header
 .main-header {
+  position: relative;
+  z-index: 100;
+
   background-color: var(--color-main);
 
   // &--opened {
@@ -9,6 +12,10 @@
 
   // &--closed {
   // }
+
+  &--nojs {
+    display: block;
+  }
 
   @include global.tablet {
     background-color: transparent;
@@ -115,25 +122,6 @@
 
 @include global.mobile-only {
   .main-header--opened .main-header__toogle {
-    &::before {
-      content: "";
-      position: absolute;
-      // z-index: 2;
-      // top: 50%;
-      top: 12px;
-      left: 50%;
-
-      width: 24px;
-      height: 2px;
-
-      background-color: var(--color-dark);
-      box-shadow: 0 8px 0 var(--color-dark), 0 16px 0 var(--color-dark);
-
-      transform: translateX(-50%);
-    }
-  }
-
-  .main-header--closed .main-header__toogle {
     &::before,
     &::after {
       content: "";
@@ -160,6 +148,25 @@
 
     &::after {
       transform: translate(-50%, -50%) rotate(-45deg);
+    }
+  }
+
+  .main-header--closed .main-header__toogle {
+    &::before {
+      content: "";
+      position: absolute;
+      // z-index: 2;
+      // top: 50%;
+      top: 12px;
+      left: 50%;
+
+      width: 24px;
+      height: 2px;
+
+      background-color: var(--color-dark);
+      box-shadow: 0 8px 0 var(--color-dark), 0 16px 0 var(--color-dark);
+
+      transform: translateX(-50%);
     }
   }
 }

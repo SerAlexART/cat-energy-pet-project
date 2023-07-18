@@ -2,7 +2,6 @@
 
 // Main Nav
 .main-nav {
-  display: block;
   display: none;
 
   // &--open {
@@ -20,7 +19,12 @@
 
 @include global.mobile-only {
   .main-header--opened .main-nav {
+    position: absolute;
+    right: 0;
+    left: 0;
+
     display: block;
+    width: 100%;
   }
 
   .main-header--closed .main-nav {
