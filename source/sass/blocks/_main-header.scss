@@ -13,10 +13,6 @@
   // &--closed {
   // }
 
-  &--nojs {
-    display: block;
-  }
-
   @include global.tablet {
     background-color: transparent;
   }

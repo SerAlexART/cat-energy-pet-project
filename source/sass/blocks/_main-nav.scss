@@ -18,6 +18,10 @@
 }
 
 @include global.mobile-only {
+  .main-header--nojs .main-header__toogle {
+    display: none;
+  }
+
   .main-header--opened .main-nav {
     position: absolute;
     right: 0;
@@ -29,6 +33,12 @@
 
   .main-header--closed .main-nav {
     display: none;
+  }
+
+  .main-header--nojs .main-nav {
+    position: static;
+
+    display: block;
   }
 }
 
