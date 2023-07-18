@@ -5,23 +5,33 @@
   display: block;
   display: none;
 
-  &--open {
-    display: block;
-  }
+  // &--open {
+  //   display: block;
+  // }
 
-  &--closed {
-    display: none;
-  }
+  // &--closed {
+  //   display: none;
+  // }
 
   @include global.tablet {
     display: block;
-   }
+  }
+}
+
+@include global.mobile-only {
+  .main-header--opened .main-nav {
+    display: block;
+  }
+
+  .main-header--closed .main-nav {
+    display: none;
+  }
 }
 
 // Main Wrapper
 .main-nav__wrapper {
   @include global.tablet {
-   padding-top: 10px;
+    padding-top: 10px;
   }
 }
 
@@ -43,7 +53,6 @@
   &--open {
     display: flex;
   }
-
 
   @include global.tablet {
     flex-direction: row;

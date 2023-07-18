@@ -39,7 +39,7 @@
 }
 
 @mixin mobile-only {
-  @media (min-width: (767px)) {
+  @media (max-width: (767px)) {
     @content;
   }
 }
@@ -80,5 +80,5 @@
 // }
 
 // @media (min-resolution: 2dppx) {
-  // background-size: cover;
+// background-size: cover;
 // }

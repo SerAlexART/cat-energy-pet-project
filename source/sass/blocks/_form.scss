@@ -38,7 +38,6 @@
     position: absolute;
     left: 50%;
 
-
     height: 1px;
     width: 10000%;
 
@@ -64,7 +63,6 @@
 
     border: 1px solid var(--color-neutral);
   }
-
 }
 
 // Form Group Wrapper Contacts
@@ -96,7 +94,7 @@
 }
 
 // Form Title BR
-.form__title__br {
+.form__title-br {
   @include global.tablet {
     display: none;
   }
@@ -279,7 +277,6 @@
   display: grid;
   gap: 20px;
 
-
   @include global.tablet {
     grid-template-columns: 1fr 1fr;
     align-items: center;
@@ -309,7 +306,6 @@
   }
 }
 
-
 // Form List
 .form__list {
   margin: 0;
@@ -332,7 +328,6 @@
   }
 }
 
-
 // Form Item
 .form__item {
   // min-height: 30px;
@@ -341,7 +336,6 @@
 .form__item:not(:last-child) {
   margin-bottom: 13px;
 }
-
 
 // Form Control
 .form__control {
@@ -375,13 +369,11 @@
 
 // Form Control Input
 .form__control-input {
-
 }
 
 .form__control-input:disabled ~ * {
   opacity: 0.3;
 }
-
 
 // Form Contol Radio
 .form__contol-radio {
@@ -493,4 +485,3 @@
     line-height: 20px;
   }
 }
-
