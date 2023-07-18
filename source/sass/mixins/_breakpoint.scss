@@ -39,7 +39,7 @@
 }
 
 @mixin mobile-only {
-  @media (min-width: (767px)) {
+  @media (max-width: (767px)) {
     @content;
   }
 }
@@ -51,7 +51,14 @@
 }
 
 @mixin desctop {
+  // @media (min-width: (1200px)) {
   @media (min-width: (1200px)) {
+    @content;
+  }
+}
+
+@mixin retina {
+  @media (min-resolution: 2dppx) {
     @content;
   }
 }
@@ -66,4 +73,12 @@
 
 // @media (min-width: global.$tablet) {
 
+// }
+
+// @media (min-resolution: global.retina) {
+
+// }
+
+// @media (min-resolution: 2dppx) {
+// background-size: cover;
 // }

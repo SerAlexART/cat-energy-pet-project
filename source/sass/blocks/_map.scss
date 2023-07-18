@@ -4,7 +4,37 @@
 .map {
   position: relative;
 
+  margin-top: auto;
+  min-height: 362px;
+
   background-color: var( --color-main);
+  background-image: url("../../img/map/map-mobile-1@1.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../img/map/map-mobile-1@2.png");
+  }
+
+  @include global.tablet {
+    min-height: 400px;
+
+    background-image: url("../../img/map/map-tablet-1@1.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/map/map-tablet-1@2.png");
+    }
+  }
+
+  @include global.desctop {
+    background-image: url("../../img/map/map-desctop-1@1.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/map/map-desctop-1@2.png");
+    }
+  }
+
 }
 
 // Map Container
@@ -21,9 +51,10 @@
 
   display: grid;
   grid-template-columns: 1fr 1fr;
+  align-items: center;
   gap: 30px;
 
-  padding: 26px 70px;
+  padding: 26px 20px;
 
   background-color: var( --color-main);
 
@@ -46,6 +77,14 @@
     gap: 60px;
 
     padding: 60px 80px;
+  }
+
+  &--error {
+    background-color: var(--color-neutral);
+
+    @include global.desctop {
+      background-color: var( --color-main);
+    }
   }
 }
 
@@ -70,6 +109,7 @@
   color: var(--color-dark-lighten);
 
   @include global.tablet {
+    font-size: 16px;
     text-align: right;
   }
 

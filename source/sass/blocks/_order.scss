@@ -1,3 +1,5 @@
+@use "../global/_global";
+
 // Order
 .order {
 
@@ -6,12 +8,24 @@
 // Order Container
 .order__container {
   padding: 25px var(--p-l-r) 30px;
+
+  @include global.tablet {
+    padding: 35px 70px 70px;
+  }
+
+  @include global.desctop {
+    padding: 35px var(--p-l-r) 80px;
+  }
 }
 
 // Order Title
 .order__title {
   margin: 0;
   margin-bottom: 35px;
+
+  @include global.tablet {
+    margin-bottom: 55px;
+  }
 }
 
 // Order Text
@@ -20,4 +34,15 @@
   margin-bottom: 20px;
 
   text-transform: uppercase;
+
+  @include global.tablet {
+    margin-bottom: 30px;
+
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  @include global.desctop {
+    margin-bottom: 65px;
+  }
 }

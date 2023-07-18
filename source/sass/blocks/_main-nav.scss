@@ -2,21 +2,50 @@
 
 // Main Nav
 .main-nav {
-  display: block;
+  display: none;
 
-  &--open {
+  // &--open {
+  //   display: block;
+  // }
+
+  // &--closed {
+  //   display: none;
+  // }
+
+  @include global.tablet {
     display: block;
   }
+}
 
-  &--closed {
+@include global.mobile-only {
+  .main-header--nojs .main-header__toogle {
     display: none;
+  }
+
+  .main-header--opened .main-nav {
+    position: absolute;
+    right: 0;
+    left: 0;
+
+    display: block;
+    width: 100%;
+  }
+
+  .main-header--closed .main-nav {
+    display: none;
+  }
+
+  .main-header--nojs .main-nav {
+    position: static;
+
+    display: block;
   }
 }
 
 // Main Wrapper
 .main-nav__wrapper {
   @include global.tablet {
-   padding-top: 10px;
+    padding-top: 10px;
   }
 }
 
@@ -38,7 +67,6 @@
   &--open {
     display: flex;
   }
-
 
   @include global.tablet {
     flex-direction: row;

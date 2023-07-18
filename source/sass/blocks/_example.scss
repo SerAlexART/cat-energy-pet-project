@@ -39,11 +39,20 @@
 .example__container {
   padding: 25px var(--p-l-r) 40px;
 
+  @include global.tablet {
+    padding: 45px var(--p-l-r) 100px;
+
+    border-top: 1px solid var(--color-border-neutral);
+  }
+
   @include global.desctop {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 60px;
 
+    padding: 35px var(--p-l-r) 75px;
+
+    border: none;
   }
 }
 
@@ -62,8 +71,12 @@
   margin: 0;
   margin-bottom: 40px;
 
+  @include global.tablet {
+    margin-bottom: 60px;
+  }
+
   @include global.desctop {
-   margin-bottom: auto;
+   margin-bottom: 140px;
   }
 }
 
@@ -74,9 +87,16 @@
 
   color: var(--color-dark-lighten);
 
+  @include global.tablet {
+    font-size: 16px;
+    line-height: 24px;
+
+    margin-bottom: 50px;
+  }
+
   @include global.desctop {
     margin-bottom: 70px;
-   }
+  }
 }
 
 
@@ -86,6 +106,8 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 60px;
+
+    margin-bottom: 100px;
   }
 
   @include global.desctop {
@@ -93,6 +115,7 @@
     gap: 55px;
 
     max-width: 366px;
+    margin-bottom: 0;
   }
 }
 
@@ -121,13 +144,30 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: flex-end;
+
+    font-size: 20px;
+    line-height: 20px;
   }
 
   @include global.desctop {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 40px;
+    align-items: center;
 
     margin-bottom: 0;
+  }
+}
+
+// Example Slider Compare
+.example-slider-compare {
+  margin: 0 auto;
+
+  @include global.desctop {
+    align-self: start;
+    justify-self: end;
+
+    margin: 0;
   }
 }

@@ -10,12 +10,22 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 60px;
+
+    margin-bottom: 35px;
+
+    &--contacts {
+      margin-bottom: 0;
+    }
   }
 }
 
 // Form Group Wrapper
 .form__group-wrapper {
-  padding: 20px 0 20px;
+  padding: 20px 0;
+
+  @include global.tablet {
+    padding: 35px 0;
+  }
 }
 
 // Form Group Wrapper Accent
@@ -27,7 +37,6 @@
     content: "";
     position: absolute;
     left: 50%;
-
 
     height: 1px;
     width: 10000%;
@@ -54,7 +63,6 @@
 
     border: 1px solid var(--color-neutral);
   }
-
 }
 
 // Form Group Wrapper Contacts
@@ -77,10 +85,16 @@
 .form__title {
   margin-bottom: 35px;
   padding: 0;
+
+  @include global.tablet {
+    margin-bottom: 75px;
+
+    line-height: 36px;
+  }
 }
 
 // Form Title BR
-.form__title__br {
+.form__title-br {
   @include global.tablet {
     display: none;
   }
@@ -91,6 +105,10 @@
   font-size: 16px;
   text-transform: uppercase;
   color: var(--color-dark-lighten);
+
+  @include global.tablet {
+    font-size: 20px;
+  }
 }
 
 // Form Field
@@ -129,6 +147,10 @@
   transition-duration: 0.3s;
   transition-timing-function: ease-in-out;
 
+  @include global.tablet {
+    font-size: 20px;
+    line-height: 20px;
+  }
 
   &:hover,
   &:--hover {
@@ -166,6 +188,15 @@
   background-repeat: no-repeat;
   background-position: top 50% right 20px;
   background-size: 20px;
+
+  &:focus,
+  &--focus {
+    background-image: url("../../img/icon/form-icon-email-current.svg");
+  }
+
+  &--error {
+    background-image: url("../../img/icon/form-icon-email-error.svg");
+  }
 }
 
 // Form Input Phone
@@ -178,6 +209,15 @@
   background-repeat: no-repeat;
   background-position: top 50% right 20px;
   background-size: 20px;
+
+  &:focus,
+  &--focus {
+    background-image: url("../../img/icon/form-icon-phone-current.svg");
+  }
+
+  &--error {
+    background-image: url("../../img/icon/form-icon-phone-error.svg");
+  }
 }
 
 // Form Textarea
@@ -196,6 +236,7 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 16px;
+  text-transform: uppercase;
   color: var(--color-dark-lighten);
 
   overflow: auto;
@@ -204,6 +245,11 @@
   transition-property: outline;
   transition-duration: 0.3s;
   transition-timing-function: ease-in-out;
+
+  @include global.tablet {
+    font-size: 20px;
+    line-height: 30px;
+  }
 
   &:hover,
   &:--hover {
@@ -230,7 +276,6 @@
 .form__button-wrapper {
   display: grid;
   gap: 20px;
-
 
   @include global.tablet {
     grid-template-columns: 1fr 1fr;
@@ -261,7 +306,6 @@
   }
 }
 
-
 // Form List
 .form__list {
   margin: 0;
@@ -284,7 +328,6 @@
   }
 }
 
-
 // Form Item
 .form__item {
   // min-height: 30px;
@@ -293,7 +336,6 @@
 .form__item:not(:last-child) {
   margin-bottom: 13px;
 }
-
 
 // Form Control
 .form__control {
@@ -327,13 +369,11 @@
 
 // Form Control Input
 .form__control-input {
-
 }
 
 .form__control-input:disabled ~ * {
   opacity: 0.3;
 }
-
 
 // Form Contol Radio
 .form__contol-radio {
@@ -439,5 +479,9 @@
   font-size: 16px;
   text-transform: uppercase;
   color: var(--color-dark-lighten);
-}
 
+  @include global.tablet {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}

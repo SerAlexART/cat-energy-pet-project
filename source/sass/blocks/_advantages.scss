@@ -1,3 +1,5 @@
+@use "../global/_global";
+
 // Advantages
 .advantages {
 
@@ -6,10 +8,26 @@
 // Advantages Container
 .advantages__container {
   padding: 10px var(--p-l-r) 50px;
+
+  @include global.tablet {
+    padding: 25px var(--p-l-r) 45px;
+  }
+
+  @include global.desctop {
+    padding: 35px var(--p-l-r);
+  }
 }
 
 // Advantages Title
 .advantages__title {
   margin: 0;
   margin-bottom: 40px;
+
+  @include global.tablet {
+    margin-bottom: 30px;
+  }
+
+  @include global.desctop {
+    margin-bottom: 70px;
+  }
 }

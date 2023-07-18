@@ -1,3 +1,5 @@
+@use "../global/_global";
+
 // Logo
 .logo {
   display: inline-block;
@@ -10,6 +12,7 @@
   transition-property: opacity, outline;
   transition-duration: 0.3s;
   transition-timing-function: ease-in-out;
+
 
   &:hover,
   &:focus,
@@ -26,6 +29,46 @@
   &:active,
   &:--active {
     opacity: 0.6;
+  }
+}
+
+// Logo Image
+.logo__image {
+
+  @include global.tablet {
+    width: 174px;
+    height: 59px;
+  }
+
+  @include global.desctop {
+    width: 202px;
+    height: 59px;
+  }
+
+  &--mobile {
+    @include global.tablet {
+      display: none;
+    }
+  }
+
+  &--tablet {
+    display: none;
+
+    @include global.tablet {
+      display: block;
+    }
+
+    @include global.desctop {
+      display: none;
+    }
+  }
+
+  &--desctop {
+    display: none;
+
+    @include global.desctop {
+      display: block;
+    }
   }
 }
 
@@ -56,5 +99,15 @@
   &:active,
   &:--active {
     opacity: 0.6;
+  }
+}
+
+// Logo Footer Current
+.logo-footer--current {
+  cursor: auto;
+
+  &:hover,
+  &:--hover {
+    opacity: 1;
   }
 }

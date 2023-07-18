@@ -7,6 +7,14 @@
 // Programs Container
 .programs__container {
   padding: 10px var(--p-l-r);
+
+  @include global.tablet {
+    padding: 25px var(--p-l-r);
+  }
+
+  @include global.desctop {
+    padding: 80px var(--p-l-r) 35px;
+  }
 }
 
 // Programs List

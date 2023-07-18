@@ -1,13 +1,20 @@
+@use "../global/_global";
+
 // Statistics
 .statistics {
   position: relative;
 
   padding: 15px;
+  padding-bottom: 20px;
 
   text-align: center;
 
   border: 1px solid var(--color-border-neutral);
   border-radius: 4px;
+
+  @include global.tablet {
+    padding-bottom: 25px;
+  }
 }
 
 // Statistics Wrapper
@@ -21,6 +28,11 @@
   // margin-bottom: 5px;
 
   text-transform: uppercase;
+
+  @include global.tablet {
+    font-size: 30px;
+    line-height: 37px;
+  }
 }
 
 // Statistics Description
@@ -31,7 +43,7 @@
 
   display: grid;
   grid-template-columns: 15px 1fr 15px;
-  width: 70%;
+  // width: 70%;
 
   margin: 0;
 
@@ -43,6 +55,16 @@
 
   transform: translateX(-50%);
 
+  @include global.tablet {
+    font-size: 14px;
+    line-height: 14px;
+    background-color: var(--color-main);
+  }
+
+  @include global.desctop {
+    background-color: var(--color-neutral);
+  }
+
   &::before,
   &::after {
     content: "";
@@ -50,5 +72,13 @@
     width: 100%;
     height: 100%;
     background-color: var(--color-neutral);
+
+    @include global.tablet {
+      background-color: var(--color-main);
+    }
+
+    @include global.desctop {
+      background-color: var(--color-neutral);
+    }
   }
 }

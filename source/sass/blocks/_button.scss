@@ -26,6 +26,11 @@
   transition-duration: 0.3s;
   transition-timing-function: ease-in-out;
 
+  @include global.tablet {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
   &:hover,
   &:focus,
   &:--hover,
@@ -110,7 +115,7 @@
 
   cursor: pointer;
 
-  transition-property: background-color, color, outline;
+  transition-property: background-color, color, outline, opacity;
   transition-duration: 0.3s;
   transition-timing-function: ease-in-out;
 
@@ -124,7 +129,7 @@
   }
 
   @include global.desctop {
-    // color: var(--color-main);
+    font-size: 20px;
   }
 
   &:hover,
@@ -146,22 +151,16 @@
   }
 }
 
+
+// Button Header Current
 .button-header--current {
   color: var(--color-accent);
 
   cursor: auto;
 
   &:hover,
-  &:focus,
-  &:--hover,
-  &:--focus {
-    color: var(--color-accent-dark);
-  }
-
-
-  &:active,
-  &:--active {
-    color: var(--color-accent-dark);
+  &:--hover {
+    color: var(--color-accent);
   }
 
   @include global.tablet {
@@ -169,12 +168,19 @@
 
     color: var(--color-dark);
 
+    &:hover,
+    &:focus,
+    &:--hover,
+    &:--focus {
+      color: var(--color-dark);
+    }
+
     &::before {
       content: "";
       position: absolute;
       left: 0;
       right: 0;
-      bottom: -8px;
+      bottom: -10px;
 
       height: 2px;
       width: 100%;
@@ -183,6 +189,50 @@
     }
   }
 }
+
+// Button Header Hero
+.button-header--hero {
+  @include global.desctop {
+    color: var(--color-main);
+
+    &:hover,
+    &:focus,
+    &:--hover,
+    &:--focus {
+      color: var(--color-main);
+
+      opacity: 0.8;
+    }
+
+    &:active,
+    &:--active {
+      color: var(--color-main);
+
+      opacity: 0.3;
+    }
+  }
+}
+
+// Button Header Hero Current
+.button-header--hero-current {
+  @include global.desctop {
+    color: var(--color-main);
+
+    &:hover,
+    &:focus,
+    &:--hover,
+    &:--focus {
+      opacity: 1;
+    }
+
+
+    &::before {
+      content: "";
+      background-color: var(--color-main);
+    }
+  }
+}
+
 
 // Button More
 .button-more {
@@ -272,6 +322,10 @@
   margin-bottom: 8px;
 
   text-transform: uppercase;
+
+  @include global.tablet {
+    margin-bottom: 20px;
+  }
 }
 
 // Button More Text
@@ -279,6 +333,11 @@
   margin-bottom: 20px;
 
   line-height: 30px;
+
+  @include global.tablet {
+    font-size: 16px;
+    line-height: 18px;
+  }
 }
 
 // Button More Button
@@ -323,8 +382,10 @@
 
 // Button Info
 .button-info {
+  justify-self: start;
+
   display: grid;
-  grid-template-columns: max-content 32px;
+  grid-template-columns: auto 32px;
   gap: 25px;
   align-items: center;
 

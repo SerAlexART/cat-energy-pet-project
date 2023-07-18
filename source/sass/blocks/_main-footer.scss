@@ -15,14 +15,22 @@
 
   @include global.tablet {
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 30px;
+
+    padding: 60px var(--p-l-r) 60px;
    }
 }
 
 // Main Footer Logo
 .main-footer__logo {
+  justify-self: start;
+
   margin-bottom: 30px;
+
+  @include global.tablet {
+    margin-bottom: 0;
+   }
 
   &--current:hover {
     cursor: auto;
@@ -39,6 +47,9 @@
   border-bottom: 1px solid var(--color-border-neutral);
 
   @include global.tablet {
+    margin: 0;
+    padding: 0;
+
     border: none;
    }
 }
@@ -46,4 +57,19 @@
 // Main Footer Social List
 .main-footer__social-list {
   justify-content: center;
+}
+
+// Main Footer Copyright
+.main-footer__copyright {
+
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+
+  @include global.tablet {
+    width: auto;
+
+    justify-content: flex-end;
+   }
 }
